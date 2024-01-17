@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 section.s1{
-    background-image: url(img/te\ op.jpeg);
+    background-image: url(te\ op.jpeg);
     width: fit-content;
 }
 section.s1 h2+p,section.s1 h2+p+p{
@@ -29,8 +29,8 @@ header{
     color: aliceblue;
 }
 table.res{background-color: #dddddd;}
-section.s2{background-image: url(img/f\ im\ op.jpeg);}
-section.res{background-image: url(img/te\ op.jpeg);}
+section.s2{background-image: url(f\ im\ op.jpeg);}
+section.res{background-image: url(te\ op.jpeg);}
 footer{
     color: #000000;
 overflow: hidden;
