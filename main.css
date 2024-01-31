@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 section.s1{
-    background-image: url(te\ op.jpeg);
+    background-image: url(img/te\ op.jpeg);
     width: fit-content;
 }
 section.s1 h2+p,section.s1 h2+p+p{
@@ -27,14 +27,15 @@ header{
     background-color: #023f70;
     text-align: center;
     color: aliceblue;
+    margin-top: 0%;margin-bottom: 0%;margin-left: 0%;margin-right: 0%;
 }
 table.res{background-color: #dddddd;}
-section.s2{background-image: url(f\ im\ op.jpeg);}
-section.res{background-image: url(te\ op.jpeg);}
+section.s2{background-image: url(img/f\ im\ op.jpeg);}
+section.res{background-image: url(img/te\ op.jpeg);}
 footer{
     color: #000000;
 overflow: hidden;
-margin-top: 0%;margin-bottom: 0%;margin-left: 0%;margin-right: 0%;}
+margin-top: 1%;margin-bottom: 0%;margin-left: 0%;margin-right: 0%;}
     footer a{color: rgb(0, 0, 0);
     float: left;
     margin: 2;
