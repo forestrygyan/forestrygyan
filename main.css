@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 section.s1,section.s2{
-    background-color: rgba(0, 255, 60, 0.105);
+    background-color: rgba(9, 48, 221, 0.412);
     width: fit-content;
    margin: 0%;
 }
@@ -10,7 +10,7 @@ section.s1 h2+p,section.s1 h2+p+p{
     color: #000000;
     font-size: 110%;
 }
-nav{background-color: rgba(208, 255, 0, 0.845);
+nav{background-color: rgba(0, 0, 0, 0.845);
 overflow:hidden;
 margin: 0%;}
 li a {text-decoration: none;font-size: 145%;}
@@ -19,14 +19,14 @@ nav a {
     padding: 20px;
     text-align: center;
     float: left;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 nav a:hover{
     color: rgb(255, 0, 0);
 }
-body{background-color: rgba(45, 85, 11, 0.549);}
+body{background-color: #02701a7e;;}
 header{
-    background-color: #023f70;
+    background-color: #02701a; 
     text-align: center;
     color: aliceblue;
     margin-top: 0%;margin-bottom: 0%;margin-left: 0%;margin-right: 0%;
@@ -36,13 +36,13 @@ header h1{
 }
 table.res{background-color: #dddddd;
 width: fit-content;}
-section.s2{background-color:rgba(0, 255, 60, 0.105) ;}
-section.res{background-color:rgba(0, 255, 60, 0.105) ;}
+section.s2{background-color:rgba(1, 79, 19, 0.81) ;}
+section.res{background-color:rgba(1, 79, 19, 0.81) ;}
 footer{
     color: #000000;
 overflow: hidden;
 margin-top: 1%;margin-bottom: 0%;margin-left: 0%;margin-right: 0%;}
-    footer a{color: rgb(0, 0, 0);
+    footer a{color: rgb(255, 255, 255);
     float: left;
     margin: 2;
 text-decoration: none;
