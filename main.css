@@ -2,16 +2,15 @@
     box-sizing: border-box;
 }
 section.s1,section.s2{
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(9, 48, 221, 0.412);
     width: fit-content;
    margin: 0%;
-   color: #dddddd;
 }
 section.s1 h2+p,section.s1 h2+p+p{
-    color: #ffffff;
+    color: #000000;
     font-size: 110%;
 }
-nav{background-color: rgba(6, 94, 0, 0.845);
+nav{background-color: rgba(0, 0, 0, 0.845);
 overflow:hidden;
 margin: 0%;}
 li a {text-decoration: none;font-size: 145%;}
@@ -25,9 +24,9 @@ nav a {
 nav a:hover{
     color: rgb(255, 0, 0);
 }
-body{background-color: #000000;;}
+body{background-color: #02701a7e;;}
 header{
-    background-color: #000000; 
+    background-color: #02701a; 
     text-align: center;
     color: aliceblue;
     margin-top: 0%;margin-bottom: 0%;margin-left: 0%;margin-right: 0%;
@@ -37,8 +36,8 @@ header h1{
 }
 table.res{background-color: #dddddd;
 width: fit-content;}
-section.s2{background-color:rgba(0, 0, 0, 0.81) ;}
-section.res{background-color:rgba(0, 0, 0, 0.81) ;}
+section.s2{background-color:rgba(1, 79, 19, 0.81) ;}
+section.res{background-color:rgba(1, 79, 19, 0.81) ;}
 footer{
     color: #000000;
 overflow: hidden;
@@ -66,3 +65,4 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
