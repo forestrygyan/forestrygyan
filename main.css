@@ -65,4 +65,23 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+ table.saf{
+
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-image: url(img/f\ im\ op.jpeg);
+}
+tr:nth-child(odd) {
+background-color: aliceblue;
+}
 
