@@ -79,7 +79,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-  background-image: url(img/f\ im\ op.jpeg);
+  background-color: aliceblue;;
 }
 tr:nth-child(odd) {
 background-color: aliceblue;
