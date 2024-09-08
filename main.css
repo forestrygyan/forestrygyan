@@ -91,3 +91,99 @@ tr:nth-child(odd) {
 background-color: aliceblue;
 }
 
+
+
+
+/* Base styles for mobile devices (default) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+}
+
+nav a {
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+main {
+    padding: 1em;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive design for tablets and larger devices */
+@media (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    nav {
+        justify-content: space-around;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .main-content, .sidebar {
+        flex: 1;
+    }
+
+    .sidebar {
+        max-width: 300px;
+    }
+}
+
+/* Responsive design for desktops and larger devices */
+@media (min-width: 1200px) {
+    .container {
+        width: 70%;
+    }
+
+    main {
+        flex-direction: row;
+    }
+
+    .main-content, .sidebar {
+        margin: 1em;
+    }
+
+    .sidebar {
+        max-width: 350px;
+    }
+}
