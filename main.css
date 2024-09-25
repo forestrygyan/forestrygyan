@@ -93,5 +93,106 @@ background-color: aliceblue;
 
 
 
+/* Ensure images scale properly */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Adjust the container width */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Adjust this to suit your layout */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 1024px) {
+  .container {
+      padding: 0 10px;
+  }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  body {
+      font-size: 14px; /* Reduce text size slightly */
+  }
+
+  .container {
+      padding: 0 5px;
+  }
+
+  /* Stack columns vertically */
+  .column {
+      width: 100%;
+      display: block;
+  }
+
+  /* Adjust the navigation for mobile */
+  nav ul {
+      display: block;
+      width: 100%;
+  }
+
+  nav ul li {
+      display: block;
+      margin: 5px 0;
+  }
+
+  button, input[type="submit"] {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px;
+  }
+}
+
+/* Handle very small screens */
+@media (max-width: 480px) {
+  body {
+      font-size: 12px;
+  }
+
+  h1 {
+      font-size: 1.5em;
+  }
+
+  img {
+      width: 100%;
+  }
+
+  /* Adjust specific elements further as needed */
+}
+
+
+
+
+/* Default logo size for larger screens */
+.logo {
+  max-width: 100px; /* Adjust this as needed for your site */
+  height: auto;
+}
+
+/* Adjust the logo size for tablets */
+@media (max-width: 100px) {
+  .logo {
+      max-width: 250px; /* Adjust size for tablets */
+  }
+}
+
+/* Adjust the logo size for mobile phones */
+@media (max-width: 100px) {
+  .logo {
+      max-width: 150px; /* Adjust size for mobile phones */
+  }
+}
+
+/* Adjust the logo size for very small screens */
+@media (max-width: 100px) {
+  .logo {
+      max-width: 120px; /* Adjust size for very small devices */
+  }
+}
 
 
