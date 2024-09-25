@@ -203,7 +203,11 @@ img {
     transform: translateY(-10px);
   }
 }
-
+body {
+  margin: 0;
+  padding: 0;
+  background-color:#02701a7e;;; /* Change or remove green color */
+}
 .logo { /* Replace .logo with the actual logo class or ID */
   animation: bounce 2s infinite;
 }
