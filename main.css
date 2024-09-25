@@ -195,4 +195,15 @@ img {
   }
 }
 
+ @keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 
+.logo { /* Replace .logo with the actual logo class or ID */
+  animation: bounce 2s infinite;
+}
