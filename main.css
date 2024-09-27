@@ -211,3 +211,21 @@ body {
 .logo { /* Replace .logo with the actual logo class or ID */
   animation: bounce 2s infinite;
 }
+/* Add a zoom effect to the text */
+.tile:hover .tile-text {
+  opacity: 1;
+  transform: translateY(0) scale(1.1); /* Zoom the text slightly */
+}
+
+.tile {
+  position: relative;
+  width: 300px;  /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
+  
+  background-size: cover;  /* Ensures the image covers the entire tile */
+  background-position: center;  /* Centers the image */
+  border-radius: 10px;  /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
