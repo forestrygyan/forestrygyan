@@ -229,3 +229,15 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
+.insta-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+.insta-grid blockquote {
+  flex: 1 1 300px;
+  max-width: 100%;
+}
