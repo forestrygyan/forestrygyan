@@ -17,7 +17,11 @@ const questions = [
     },
     {
         date: "2026-01-16",
-        text: "What is Silvics and how it is diffrenet from Silviculture?"
+        text: "What is Silvics and how it is different from Silviculture?"
+    },
+     {
+        date: "2026-01-17",
+        text: "What is Carbon Credit? How does it work?"
     }
 ];
 
@@ -81,3 +85,4 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.classList.remove("active");
     };
 });
+
