@@ -789,3 +789,72 @@ body {
         font-size: 18px;
     }
 }
+/* ===== PREMIUM DEMO DOWNLOAD BUTTON ===== */
+
+.demo-download-btn {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 14px 26px;
+    border-radius: 14px;
+
+    text-decoration: none;
+    background: linear-gradient(135deg, #1e5631, #2ecc71);
+    color: #ffffff;
+
+    box-shadow: 0 12px 30px rgba(30, 86, 49, 0.35);
+    transition: all 0.3s ease;
+}
+
+/* Icon circle */
+.download-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+/* Text block */
+.download-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.download-text small {
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+/* Hover effect */
+.demo-download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    background: linear-gradient(135deg, #145a32, #27ae60);
+}
+
+/* Mobile optimisation */
+@media (max-width: 480px) {
+    .demo-download-btn {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+
+    .download-text {
+        align-items: center;
+        text-align: center;
+    }
+}
