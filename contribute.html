@@ -1,158 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pay Forestry Gyan</title>
-  <link rel="stylesheet" href="main.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #064e3b;
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      position: relative;
-      overflow: hidden;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Support Forestry Gyan</title>
 
-    .forest-line {
-      position: absolute;
-      top: 20px;
-      width: 100%;
-      text-align: center;
-      color: #d4f5d4;
-      font-size: 18px;
-      font-style: italic;
-    }
+<style>
+/* ===== BASE STYLES ===== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #064e3b;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-    .sub-line {
-      position: absolute;
-      top: 50px;
-      width: 100%;
-      text-align: center;
-      color: #ffffff;
-      font-size: 16px;
-    }
+/* ===== HEADER TEXT ===== */
+.header-text {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 0 14px;
+}
 
-    .tree {
-      position: absolute;
-      bottom: 0;
-      width: 100px;
-      height: 150px;
-      background: linear-gradient(to top, #2e7d32 50%, #1b5e20 50%);
-      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-      animation: floatTree 5s ease-in-out infinite alternate;
-    }
+.forest-line {
+  color: #d4f5d4;
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 6px;
+}
 
-    .tree:nth-child(1) { left: 5%; animation-delay: 0s; }
-    .tree:nth-child(2) { left: 20%; animation-delay: 1s; }
-    .tree:nth-child(3) { left: 40%; animation-delay: 0.5s; }
-    .tree:nth-child(4) { left: 60%; animation-delay: 1.5s; }
-    .tree:nth-child(5) { left: 80%; animation-delay: 2s; }
+.sub-line {
+  color: #ffffff;
+  font-size: 16px;
+}
 
-    @keyframes floatTree {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-10px); }
-    }
+/* ===== ANIMATED TREES ===== */
+.tree {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 150px;
+  background: linear-gradient(to top, #2e7d32 50%, #1b5e20 50%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: floatTree 5s ease-in-out infinite alternate;
+  opacity: 0.7;
+}
 
-    .container {
-      background: linear-gradient(145deg, #ffffff, #d4f5d4);
-      border-radius: 20px;
-      padding: 25px;
-      max-width: 420px;
-      width: 100%;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-      text-align: center;
-      z-index: 2;
-    }
+.tree:nth-child(1) { left: 5%; animation-delay: 0s; }
+.tree:nth-child(2) { left: 20%; animation-delay: 1s; }
+.tree:nth-child(3) { left: 40%; animation-delay: 0.5s; }
+.tree:nth-child(4) { left: 60%; animation-delay: 1.5s; }
+.tree:nth-child(5) { left: 80%; animation-delay: 2s; }
 
-    h2 {
-      color: #2d7a2d;
-      margin-bottom: 20px;
-    }
+@keyframes floatTree {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
 
-    .qr-img {
-      width: 200px;
-      height: 200px;
-      margin: 10px auto;
-      border-radius: 16px;
-      border: 2px solid #4caf50;
-      object-fit: cover;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+/* ===== MAIN CONTAINER ===== */
+.container {
+  background: linear-gradient(145deg, #ffffff, #d4f5d4);
+  border-radius: 20px;
+  padding: 25px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  text-align: center;
+  z-index: 2;
+}
 
-    .upi-id {
-      margin: 15px 0 5px;
-      font-size: 18px;
-      color: #2c3e50;
-      word-break: break-word;
-    }
+h2 {
+  color: #2d7a2d;
+  margin-bottom: 20px;
+}
 
-    .copy-btn {
-      background: #ffc107;
-      padding: 6px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 5px;
-      font-size: 14px;
-      display: inline-block;
-      color: #fff;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
+/* ===== QR CODE ===== */
+.qr-img {
+  width: 200px;
+  height: 200px;
+  margin: 10px auto;
+  border-radius: 16px;
+  border: 2px solid #4caf50;
+  object-fit: cover;
+}
 
-    .copy-btn:hover {
-      background: #e0a800;
-    }
+/* ===== UPI ===== */
+.upi-id {
+  margin: 15px 0 10px;
+  font-size: 17px;
+  color: #2c3e50;
+  word-break: break-word;
+}
 
-    .note {
-      font-size: 15px;
-      color: #555;
-      margin-top: 20px;
-    }
-  </style>
+.copy-btn {
+  background: #ffc107;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 14px;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.copy-btn:hover {
+  background: #e0a800;
+}
+
+.note {
+  font-size: 15px;
+  color: #555;
+  margin-top: 15px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 600px) {
+
+  body {
+    padding: 12px;
+    align-items: flex-start;
+  }
+
+  .header-text {
+    position: relative;
+    top: 0;
+    margin-bottom: 15px;
+  }
+
+  .forest-line {
+    font-size: 14px;
+  }
+
+  .sub-line {
+    font-size: 13px;
+  }
+
+  .container {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .qr-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .upi-id {
+    font-size: 15px;
+  }
+
+  .note {
+    font-size: 13px;
+  }
+
+  .tree {
+    width: 70px;
+    height: 100px;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <div class="forest-line">"Forests are the lungs of our planet — conserve them for a greener tomorrow."</div>
-  <div class="sub-line">Forestry Gyan – Promoting Forestry Education for a Sustainable Future</div>
+<!-- HEADER -->
+<div class="header-text">
+  <div class="forest-line">
+    "Forests are the lungs of our planet — conserve them for a greener tomorrow."
+  </div>
+  <div class="sub-line">
+    Forestry Gyan – Promoting Forestry Education for a Sustainable Future
+  </div>
+</div>
 
-  <!-- Animated Trees -->
-  <div class="tree"></div>
-  <div class="tree"></div>
-  <div class="tree"></div>
-  <div class="tree"></div>
-  <div class="tree"></div>
+<!-- TREES -->
+<div class="tree"></div>
+<div class="tree"></div>
+<div class="tree"></div>
+<div class="tree"></div>
+<div class="tree"></div>
 
-  <div class="container">
-    <h2>Support Forestry Gyan</h2>
+<!-- PAYMENT CARD -->
+<div class="container">
+  <h2>Support Forestry Gyan</h2>
 
-    <!-- QR Image -->
-    <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=aryansen9876@oksbi&pn=Aryan+Sen&cu=INR&size=200x200" alt="UPI QR Code" class="qr-img" />
+  <img 
+    src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=aryansen9876@oksbi&pn=Aryan+Sen&cu=INR&size=200x200" 
+    alt="UPI QR Code" 
+    class="qr-img"
+  />
 
-    <!-- UPI ID -->
-    <div class="upi-id">
-      UPI ID: <strong>aryansen9876@oksbi</strong>
-      <div class="copy-btn" onclick="copyUPI()">Copy</div>
-      <hr>
-    
-
-    </div>
-
-    <p class="note">Scan the QR code or copy the UPI ID to make a payment using any UPI app.</p>
+  <div class="upi-id">
+    UPI ID: <strong>aryansen9876@oksbi</strong>
   </div>
 
-  <script>
-    function copyUPI() {
-      navigator.clipboard.writeText("aryansen9876@oksbi").then(() => {
-        alert("UPI ID copied to clipboard!");
-      });
-    }
-  </script>
+  <div class="copy-btn" onclick="copyUPI()">Copy UPI ID</div>
+
+  <p class="note">
+    Scan the QR code or copy the UPI ID to make a payment using any UPI app.
+  </p>
+</div>
+
+<script>
+function copyUPI() {
+  navigator.clipboard.writeText("aryansen9876@oksbi").then(() => {
+    alert("UPI ID copied to clipboard!");
+  });
+}
+</script>
 
 </body>
 </html>
