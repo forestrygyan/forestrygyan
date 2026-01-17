@@ -1026,3 +1026,8 @@ body {
         margin-bottom: 10px;
     }
 }
+/* ===== REMOVE BACKGROUND IMAGE ONLY FOR ABOUT PAGE ===== */
+.about-page {
+    background: #f5fcf8;   /* clean light background */
+}
+
