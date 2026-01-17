@@ -858,3 +858,171 @@ body {
         text-align: center;
     }
 }
+/* ===== FG TESTIMONIALS (HORIZONTAL & RESPONSIVE) ===== */
+.fg-testimonials {
+    margin: 40px auto 55px;
+    max-width: 900px;
+    padding: 0 16px;
+    text-align: center;
+}
+
+.fg-testimonials__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e5631;
+    margin-bottom: 28px;
+}
+
+/* ROW: HORIZONTAL BY DEFAULT */
+.fg-testimonials__row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* CARD */
+.fg-testimonials__card {
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    max-width: 420px;
+    padding: 24px 22px;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fgTestimonialAppear 0.7s ease forwards;
+}
+
+/* slight stagger */
+.fg-testimonials__card:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+/* AVATAR */
+.fg-testimonials__avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #1e5631;
+    margin-bottom: 14px;
+}
+
+/* TEXT */
+.fg-testimonials__text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #2f4f3f;
+    margin-bottom: 14px;
+}
+
+/* AUTHOR */
+.fg-testimonials__author {
+    font-size: 14px;
+    color: #1e5631;
+}
+
+.fg-testimonials__author b {
+    font-weight: 700;
+}
+
+/* ANIMATION */
+@keyframes fgTestimonialAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== MOBILE: STACK VERTICALLY ===== */
+@media (max-width: 700px) {
+    .fg-testimonials__row {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .fg-testimonials__card {
+        max-width: 100%;
+    }
+}
+/* ===== ABOUT FOUNDER (SCOPED & FINAL) ===== */
+.fg-founder {
+    margin: 60px auto;
+    padding: 0 18px;
+    max-width: 1100px;
+}
+
+.fg-founder__wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* ===== FOUNDER IMAGE (CIRCULAR) ===== */
+.fg-founder__image {
+    flex-shrink: 0;
+}
+
+.fg-founder__image img {
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+}
+
+/* ===== CONTENT ===== */
+.fg-founder__content {
+    max-width: 560px;
+}
+
+.fg-founder__badge {
+    display: inline-block;
+    background: #1e5631;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+.fg-founder__content h2 {
+    font-size: clamp(24px, 4vw, 32px);
+    color: #1e5631;
+    margin-bottom: 14px;
+}
+
+.fg-founder__content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #2f4f3f;
+    margin-bottom: 12px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 800px) {
+    .fg-founder__wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .fg-founder__content {
+        max-width: 100%;
+    }
+
+    .fg-founder__image img {
+        width: 220px;
+        height: 220px;
+        margin-bottom: 10px;
+    }
+}
