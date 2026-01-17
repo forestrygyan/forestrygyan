@@ -197,16 +197,33 @@
             color: #6c7f74;
         }
 
-        /* ===== MOBILE ===== */
-        @media (max-width: 600px) {
-            .nav-links {
-                display: none; /* keep simple for landing page */
-            }
+         /* ===== MOBILE NAV FIX (VISIBLE & STABLE) ===== */
+@media (max-width: 600px) {
 
-            .container {
-                padding: 70px 16px;
-            }
-        }
+    .nav-wrap {
+        flex-direction: row;      /* keep logo left */
+        align-items: center;
+    }
+
+    .brand {
+        flex-shrink: 0;           /* logo never shrinks */
+    }
+
+    .nav-links {
+        display: flex;            /* OVERRIDES hidden state */
+        margin-left: auto;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+        max-width: 65%;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 6px 10px;
+        white-space: nowrap;
+    }
+}
     </style>
 </head>
 
@@ -322,7 +339,29 @@
     </div>
 
 </body>
+    <!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>Forestry Gyan</h3>
+            <p>
+                Learning platform for Forestry, Environment & UPSC–IFoS preparation.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>📍 India</p>
+            <p>📧 forestrygyan@gmail.com</p>
+            <p>📞 +91-XXXXXXXXXX</p>
+        </div>
+    <div class="footer-bottom">
+        <p>© 2026 Forestry Gyan | Growing knowledge for sustainable forests 🌱</p>
+    </div>
+</footer>
 </html>
+
 
 
 
