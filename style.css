@@ -1031,3 +1031,20 @@ body {
     background: #f5fcf8;   /* clean light background */
 }
 
+/* ===== ABOUT PAGE SPACING FIX ===== */
+
+/* reduce gap below founder section */
+.fg-founder {
+    margin-bottom: 25px;   /* earlier it was too large */
+}
+
+/* reduce top padding of about content */
+.about-section {
+    padding-top: 20px;     /* earlier ~60px */
+}
+
+/* optional: tighten card spacing slightly */
+.about-card {
+    margin-bottom: 18px;   /* earlier ~25px */
+}
+
