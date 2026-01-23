@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Vaniki Capsule | Forestry Gyan</title>
 
     <style>
@@ -33,14 +32,14 @@
         /* ===== NAVBAR ===== */
         .navbar {
             background: #1e5631;
-            padding: 16px 0;
+            padding: 14px 0;
+            position: relative;
         }
 
         .nav-wrap {
             width: 90%;
             max-width: 1100px;
             margin: auto;
-
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -69,20 +68,25 @@
             text-decoration: none;
             font-size: 14px;
             font-weight: 600;
-
             padding: 8px 14px;
             border-radius: 8px;
-
             border: 1px solid rgba(255,255,255,0.25);
             background: rgba(255,255,255,0.08);
-
             transition: all 0.25s ease;
         }
 
         .nav-links a:hover {
             background: rgba(255,255,255,0.18);
-            border-color: rgba(255,255,255,0.45);
             transform: translateY(-1px);
+        }
+
+        /* ===== HAMBURGER ===== */
+        .hamburger {
+            display: none;
+            font-size: 26px;
+            color: #fff;
+            cursor: pointer;
+            user-select: none;
         }
 
         /* ===== CONTAINER ===== */
@@ -93,7 +97,6 @@
             text-align: center;
         }
 
-        /* ===== HERO ===== */
         .badge {
             display: inline-block;
             background: #1e5631;
@@ -117,7 +120,6 @@
             margin-bottom: 35px;
         }
 
-        /* ===== CARD ===== */
         .card {
             background: rgba(255,255,255,0.95);
             border-radius: 20px;
@@ -138,7 +140,6 @@
             margin-bottom: 25px;
         }
 
-        /* ===== FEATURES ===== */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -155,7 +156,6 @@
             font-weight: 600;
         }
 
-        /* ===== PRICE ===== */
         .price {
             font-size: 28px;
             font-weight: 800;
@@ -165,11 +165,15 @@
 
         .price span {
             font-size: 14px;
-            font-weight: 600;
             color: #4f6f61;
         }
 
-        /* ===== CTA BUTTON ===== */
+        .price-validity {
+            font-size: 12px;
+            color: #6c7f74;
+            margin-top: 4px;
+        }
+
         .cta-btn {
             display: inline-block;
             margin-top: 22px;
@@ -177,12 +181,10 @@
             font-size: 17px;
             font-weight: 700;
             border-radius: 40px;
-
             background: linear-gradient(135deg, #e1306c, #c13584);
-            color: #ffffff;
+            color: #fff;
             text-decoration: none;
-
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
         .cta-btn:hover {
@@ -190,183 +192,155 @@
             box-shadow: 0 12px 28px rgba(0,0,0,0.3);
         }
 
-        /* ===== NOTE ===== */
         .note {
             margin-top: 18px;
             font-size: 13px;
             color: #6c7f74;
         }
 
-        /* ===== MOBILE NAV FIX (VISIBLE & STABLE) ===== */
-@media (max-width: 600px) {
+        /* ===== MOBILE MENU ===== */
+        @media (max-width: 600px) {
 
-    .nav-wrap {
-        flex-direction: row;      /* keep logo left */
-        align-items: center;
-    }
+            .hamburger {
+                display: block;
+            }
 
-    .brand {
-        flex-shrink: 0;           /* logo never shrinks */
-    }
+            .nav-links {
+                position: absolute;
+                top: 68px;
+                right: 5%;
+                flex-direction: column;
+                width: 200px;
+                background: #1e5631;
+                padding: 14px;
+                border-radius: 14px;
+                box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+                display: none;
+            }
 
-    .nav-links {
-        display: flex;            /* OVERRIDES hidden state */
-        margin-left: auto;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        gap: 8px;
-        max-width: 65%;
-    }
+            .nav-links a {
+                text-align: center;
+                margin-bottom: 8px;
+            }
 
-    .nav-links a {
-        font-size: 12px;
-        padding: 6px 10px;
-        white-space: nowrap;
-    }
-}
+            .nav-links.show {
+                display: flex;
+            }
+        }
 
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #1e5631;
+            color: #eaf7f0;
+            padding: 30px 0;
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.85;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- ===== NAVBAR ===== -->
-    <header class="navbar">
-        <div class="nav-wrap">
-            <div class="brand">
-                <img src="images/logo rd.png" alt="Forestry Gyan Logo">
-                Forestry Gyan
-            </div>
-
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                
-            </nav>
-        </div>
-    </header>
-
-    <!-- ===== MAIN CONTENT ===== -->
-    <div class="container">
-
-        <div class="badge">Forestry Gyan Presents</div>
-
-        <h1>Vaniki Capsule 🌿</h1>
-        <p class="subtitle">
-            Daily Forestry • Environment • Current Affairs Capsules  
-            <br>for UPSC, IFoS & State Forest Services
-        </p>
-        <!-- ===== TESTIMONIALS (SCOPED) ===== -->
-<section class="fg-testimonials">
-    <h3 class="fg-testimonials__title">Trusted by Aspirants 💬</h3>
-
-    <div class="fg-testimonials__row">
-
-        <div class="fg-testimonials__card">
-            <img src="images/r1.png" alt="Abhishek Abhi" class="fg-testimonials__avatar">
-
-            <p class="fg-testimonials__text">
-                “This is a wonderful and most informative page regarding forestry.
-                We are learning many facts on a daily basis.
-                Thank you for creating such an informative page.”
-            </p>
-
-            <span class="fg-testimonials__author">
-                Abhishek Abhi <br>
-                <b>@mrabhishek204</b>
-            </span>
+<header class="navbar">
+    <div class="nav-wrap">
+        <div class="brand">
+            <img src="logo rd.png" alt="Forestry Gyan Logo">
+            Forestry Gyan
         </div>
 
-        <div class="fg-testimonials__card">
-            <img src="images/r2.png" alt="Anbhishek Thakur" class="fg-testimonials__avatar">
+        <div class="hamburger" id="hamburger">☰</div>
 
-            <p class="fg-testimonials__text">
-                “I am honestly very impressed by this, and I really liked it.
-                You are doing a very good job.”
-            </p>
-
-            <span class="fg-testimonials__author">
-                Abhishek Thakur <br>
-                <b>@abhiiithaakur</b>
-            </span>
-        </div>
-
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="#">Vaniki Capsule</a>
+            <a href="#">Resources</a>
+            <a href="#">Privacy Policy</a>
+        </nav>
     </div>
-</section>
+</header>
 
+<div class="container">
 
-        <div class="card">
-            <h2>What is Vaniki Capsule?</h2>
-            <p>
-                Vaniki Capsule is a **monthly micro-learning program**
-                designed for serious aspirants. Crisp, exam-oriented forestry
-                and environment content — perfect for daily revision.
-            </p>
+    <div class="badge">Forestry Gyan Presents</div>
 
-            <div class="features">
-                <div class="feature">📘 Daily exam-oriented capsules</div>
-                <div class="feature">🌱 Forestry + Environment focus</div>
-                <div class="feature">📰 Current affairs linkage</div>
-                <div class="feature">✍ Answer-writing friendly</div>
-                <div class="feature">🎯 UPSC • IFoS • State PSC</div>
-                <div class="feature">📱 Mobile-friendly revision</div>
-            </div>
+    <h1>Vaniki Capsule 🌿</h1>
+    <p class="subtitle">
+        Daily Forestry • Environment • Current Affairs Capsules<br>
+        for UPSC, IFoS & State Forest Services
+    </p>
 
-         <div class="price">
-    ₹59 <span>/ month</span>
-    <div class="price-validity">Price valid till 31 Jan 2026</div>
+    <div class="card">
+        <h2>What is Vaniki Capsule?</h2>
+        <p>
+            Vaniki Capsule is a <b>monthly micro-learning program</b>
+            designed for serious aspirants. Crisp, exam-oriented forestry
+            and environment content for daily revision.
+        </p>
+
+        <div class="features">
+            <div class="feature">📘 Daily exam-oriented capsules</div>
+            <div class="feature">🌱 Forestry + Environment focus</div>
+            <div class="feature">📰 Current affairs linkage</div>
+            <div class="feature">✍ Answer-writing friendly</div>
+            <div class="feature">🎯 UPSC • IFoS • State PSC</div>
+            <div class="feature">📱 Mobile-friendly revision</div>
+        </div>
+
+        <div class="price">
+            ₹59 <span>/ month</span>
+            <div class="price-validity">Price valid till 31 Jan 2026</div>
+        </div>
+
+        <a href="https://instagram.com/forestry._.gyan" target="_blank" class="cta-btn">
+            DM Us on Instagram to Join
+        </a>
+
+        <div class="note">
+            Affordable • Focused • Student-first initiative
+        </div>
+    </div>
+
 </div>
 
-
-
-            <a
-                href="https://instagram.com/forestry._.gyan"
-                target="_blank"
-                class="cta-btn"
-            >
-                DM Us on Instagram to Join
-            </a>
-    <a
-    href="doc/Carbon Credit.pdf"
-    class="demo-download-btn"
-    download
->
-    <span class="download-icon">⬇</span>
-    <span class="download-text">
-        Download Demo Capsule
-        <small>Vaniki Capsule • Carbon Credit • PDF</small>
-    </span>
-</a>
-
-
-
-            <div class="note">
-                Affordable • Focused • Student-first initiative
-            </div>
-        </div>
-
-    </div>
-
-</body>
-<!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="footer-container">
-
         <div class="footer-section">
             <h3>Forestry Gyan</h3>
-            <p>
-                Learning platform for Forestry, Environment & UPSC–IFoS preparation.
-            </p>
+            <p>Learning platform for Forestry, Environment & UPSC–IFoS preparation.</p>
         </div>
 
         <div class="footer-section">
-            <h3>Contact</h3>
-            <p>📍 India</p>
-            <p>📧 forestrygyan@gmail.com</p>
-            <p>📞 +91-XXXXXXXXXX</p>
+            <p>📍 India | 📧 forestrygyan@gmail.com</p>
         </div>
-    <div class="footer-bottom">
-        <p>© 2026 Forestry Gyan | Growing knowledge for sustainable forests 🌱</p>
+
+        <div class="footer-bottom">
+            © 2026 Forestry Gyan | Growing knowledge for sustainable forests 🌱
+        </div>
     </div>
 </footer>
 
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+</script>
+
+</body>
 </html>
