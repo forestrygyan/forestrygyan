@@ -197,34 +197,7 @@
             color: #6c7f74;
         }
 
-         /* ===== MOBILE NAV FIX (VISIBLE & STABLE) ===== */
-@media (max-width: 600px) {
 
-    .nav-wrap {
-        flex-direction: row;      /* keep logo left */
-        align-items: center;
-    }
-
-    .brand {
-        flex-shrink: 0;           /* logo never shrinks */
-    }
-
-    .nav-links {
-        display: flex;            /* OVERRIDES hidden state */
-        margin-left: auto;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        gap: 8px;
-        max-width: 65%;
-    }
-
-    .nav-links a {
-        font-size: 12px;
-        padding: 6px 10px;
-        white-space: nowrap;
-    }
-}
-    </style>
 </head>
 
 <body>
@@ -236,11 +209,22 @@
                 <img src="logo rd.png" alt="Forestry Gyan Logo">
                 Forestry Gyan
             </div>
+ <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                
-            </nav>
+        <!-- Navigation Links -->
+        <nav class="nav-links" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="vanikicapsule.html">Vaniki Capsule</a>
+            <a href="contribute.html">Contribute</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+            <a href="resources.html">Resources</a>
+        </nav>
+       
         </div>
     </header>
 
@@ -362,6 +346,7 @@
     </div>
 </footer>
 </html>
+
 
 
 
