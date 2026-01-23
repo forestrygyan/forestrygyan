@@ -197,7 +197,35 @@
             color: #6c7f74;
         }
 
+        /* ===== MOBILE NAV FIX (VISIBLE & STABLE) ===== */
+@media (max-width: 600px) {
 
+    .nav-wrap {
+        flex-direction: row;      /* keep logo left */
+        align-items: center;
+    }
+
+    .brand {
+        flex-shrink: 0;           /* logo never shrinks */
+    }
+
+    .nav-links {
+        display: flex;            /* OVERRIDES hidden state */
+        margin-left: auto;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+        max-width: 65%;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 6px 10px;
+        white-space: nowrap;
+    }
+}
+
+    </style>
 </head>
 
 <body>
@@ -206,25 +234,14 @@
     <header class="navbar">
         <div class="nav-wrap">
             <div class="brand">
-                <img src="logo rd.png" alt="Forestry Gyan Logo">
+                <img src="images/logo rd.png" alt="Forestry Gyan Logo">
                 Forestry Gyan
             </div>
- <!-- Hamburger Icon -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
 
-        <!-- Navigation Links -->
-        <nav class="nav-links" id="navMenu">
-            <a href="index.html">Home</a>
-            <a href="vanikicapsule.html">Vaniki Capsule</a>
-            <a href="contribute.html">Contribute</a>
-            <a href="privacypolicy.html">Privacy Policy</a>
-            <a href="resources.html">Resources</a>
-        </nav>
-       
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                
+            </nav>
         </div>
     </header>
 
@@ -235,17 +252,17 @@
 
         <h1>Vaniki Capsule 🌿</h1>
         <p class="subtitle">
-            Forestry • Environment • Current Affairs Capsules  
+            Daily Forestry • Environment • Current Affairs Capsules  
             <br>for UPSC, IFoS & State Forest Services
         </p>
-   <!-- ===== TESTIMONIALS (SCOPED) ===== -->
+        <!-- ===== TESTIMONIALS (SCOPED) ===== -->
 <section class="fg-testimonials">
     <h3 class="fg-testimonials__title">Trusted by Aspirants 💬</h3>
 
     <div class="fg-testimonials__row">
 
         <div class="fg-testimonials__card">
-            <img src="r1.png" alt="Abhishek Abhi" class="fg-testimonials__avatar">
+            <img src="images/r1.png" alt="Abhishek Abhi" class="fg-testimonials__avatar">
 
             <p class="fg-testimonials__text">
                 “This is a wonderful and most informative page regarding forestry.
@@ -260,7 +277,7 @@
         </div>
 
         <div class="fg-testimonials__card">
-            <img src="r2.png" alt="Anbhishek Thakur" class="fg-testimonials__avatar">
+            <img src="images/r2.png" alt="Anbhishek Thakur" class="fg-testimonials__avatar">
 
             <p class="fg-testimonials__text">
                 “I am honestly very impressed by this, and I really liked it.
@@ -275,16 +292,18 @@
 
     </div>
 </section>
+
+
         <div class="card">
             <h2>What is Vaniki Capsule?</h2>
             <p>
-                Vaniki Capsule is a Monthly Micro-Learning Program
+                Vaniki Capsule is a **monthly micro-learning program**
                 designed for serious aspirants. Crisp, exam-oriented forestry
                 and environment content — perfect for daily revision.
             </p>
 
             <div class="features">
-                <div class="feature">📘 Exam-oriented capsules</div>
+                <div class="feature">📘 Daily exam-oriented capsules</div>
                 <div class="feature">🌱 Forestry + Environment focus</div>
                 <div class="feature">📰 Current affairs linkage</div>
                 <div class="feature">✍ Answer-writing friendly</div>
@@ -292,10 +311,11 @@
                 <div class="feature">📱 Mobile-friendly revision</div>
             </div>
 
-           <div class="price">
+         <div class="price">
     ₹59 <span>/ month</span>
     <div class="price-validity">Price valid till 31 Jan 2026</div>
 </div>
+
 
 
             <a
@@ -305,8 +325,8 @@
             >
                 DM Us on Instagram to Join
             </a>
- <a
-    href="Carbon Credit.pdf"
+    <a
+    href="doc/Carbon Credit.pdf"
     class="demo-download-btn"
     download
 >
@@ -316,6 +336,9 @@
         <small>Vaniki Capsule • Carbon Credit • PDF</small>
     </span>
 </a>
+
+
+
             <div class="note">
                 Affordable • Focused • Student-first initiative
             </div>
@@ -324,7 +347,7 @@
     </div>
 
 </body>
-    <!-- ===== FOOTER ===== -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="footer-container">
 
@@ -345,17 +368,5 @@
         <p>© 2026 Forestry Gyan | Growing knowledge for sustainable forests 🌱</p>
     </div>
 </footer>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
