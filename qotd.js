@@ -17,11 +17,7 @@ const questions = [
     },
     {
         date: "2026-01-16",
-        text: "What is Silvics and how it is different from Silviculture?"
-    },
-     {
-        date: "2026-01-17",
-        text: "What is Carbon Credit? How does it work?"
+        text: "What is Silvics and how it is diffrenet from Silviculture?"
     },
     {
     date: "2026-01-17",
@@ -146,5 +142,20 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.classList.remove("active");
     };
 });
+// ===== HAMBURGER MENU TOGGLE =====
+function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+}
 
+/* Optional: close menu when clicking a link (mobile UX) */
+document.addEventListener("click", function (e) {
+    const menu = document.getElementById("navMenu");
+    const burger = document.querySelector(".hamburger");
 
+    if (!menu || !burger) return;
+
+    if (!menu.contains(e.target) && !burger.contains(e.target)) {
+        menu.classList.remove("active");
+    }
+});
