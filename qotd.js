@@ -75,10 +75,118 @@ const questions = [
     date: "2026-01-30",
     text: "Explain the term growing stock and its relevance in forest inventory."
 },
+{   date: "2026-02-01",
+    text: "What is carbon sequestration? Explain the role of forests as carbon sinks."
+},
 {
-    date: "2026-01-31",
-    text: "What is joint forest management (JFM)? Discuss its objectives."
+    date: "2026-02-02",
+    text: "Define agroforestry. Discuss its significance in climate-resilient agriculture."
+},
+{
+    date: "2026-02-03",
+    text: "What is biodiversity offsetting? Critically examine its effectiveness."
+},
+{
+    date: "2026-02-04",
+    text: "Explain the concept of ecological restoration with reference to degraded forest lands."
+},
+{
+    date: "2026-02-05",
+    text: "What are invasive alien species (IAS)? Discuss their ecological impacts in India."
+},
+{
+    date: "2026-02-06",
+    text: "Discuss the objectives and limitations of the Forest Conservation Act, 1980."
+},
+{
+    date: "2026-02-07",
+    text: "What is REDD+? Examine India’s approach towards REDD+ implementation."
+},
+{
+    date: "2026-02-08",
+    text: "Explain the concept of wildlife corridors and their importance in conservation."
+},
+{
+    date: "2026-02-09",
+    text: "What is the difference between ex-situ and in-situ conservation? Give examples."
+},
+{
+    date: "2026-02-10",
+    text: "Discuss the role of mangroves in coastal protection and climate change mitigation."
+},
+{
+    date: "2026-02-11",
+    text: "What is ecosystem services approach? Explain its relevance in forest management."
+},
+{
+    date: "2026-02-12",
+    text: "Explain the causes and consequences of forest fragmentation."
+},
+{
+    date: "2026-02-13",
+    text: "What are Biosphere Reserves? How are they different from National Parks?"
+},
+{
+    date: "2026-02-14",
+    text: "Discuss the impact of climate change on forest phenology and productivity."
+},
+{
+    date: "2026-02-15",
+    text: "What is community forestry? Evaluate its role in sustainable forest management."
+},
+{
+    date: "2026-02-16",
+    text: "Explain the concept of landscape-level conservation with suitable examples."
+},
+{
+    date: "2026-02-17",
+    text: "What is the National Forest Policy, 1988? Discuss its major objectives."
+},
+{
+    date: "2026-02-18",
+    text: "Discuss the importance of forest fire management in the context of climate change."
+},
+{
+    date: "2026-02-19",
+    text: "What are non-timber forest products (NTFPs)? Explain their socio-economic importance."
+},
+{
+    date: "2026-02-20",
+    text: "Explain the role of forests in achieving India’s Nationally Determined Contributions (NDCs)."
+},
+{
+    date: "2026-02-21",
+    text: "What is sustainable forest management (SFM)? Discuss its key principles."
+},
+{
+    date: "2026-02-22",
+    text: "Discuss the ecological significance of wetlands with special reference to Ramsar sites."
+},
+{
+    date: "2026-02-23",
+    text: "What is environmental impact assessment (EIA)? Examine its relevance for forestry projects."
+},
+{
+    date: "2026-02-24",
+    text: "Explain the concept of green accounting and its relevance to environmental governance."
+},
+{
+    date: "2026-02-25",
+    text: "What are sacred groves? Discuss their role in biodiversity conservation."
+},
+{
+    date: "2026-02-26",
+    text: "Discuss the challenges in conservation of endangered forest-dwelling species in India."
+},
+{
+    date: "2026-02-27",
+    text: "What is climate-smart forestry? Explain its significance in the Indian context."
+},
+{
+    date: "2026-02-28",
+    text: "Explain the interlinkages between forests, livelihoods, and sustainable development."
 }
+
 
 ];
 
