@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forestry News | Forestry Gyan</title>
+
+<style>
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background:
+    linear-gradient(rgba(245,252,248,0.92), rgba(245,252,248,0.92)),
+    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e");
+  background-size: cover;
+}
+
+/* ===== NAVBAR (SAME AS YOUR SITE) ===== */
+.navbar {
+  background: #1e5631;
+  padding: 16px 0;
+}
+
+.nav-wrap {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.brand img {
+  height: 40px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-links a {
+  color: #eaf7f0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #ffffff;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1e5631;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    border-radius: 0 0 16px 16px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 85%;
+    text-align: center;
+  }
+}
+
+/* ===== CONTENT ===== */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #1e5631;
+}
+
+.subtitle {
+  text-align: center;
+  color: #355e4a;
+  margin-bottom: 40px;
+}
+
+/* DATE */
+.news-date {
+  margin-bottom: 40px;
+}
+
+.date-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #145a32;
+  margin-bottom: 15px;
+  border-left: 5px solid #1e5631;
+  padding-left: 10px;
+}
+
+/* CARD */
+.news-card {
+  background: rgba(255,255,255,0.95);
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.news-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e5631;
+  margin-bottom: 10px;
+}
+
+/* ===== SMART CONTENT FORMAT ===== */
+.news-content {
+  font-size: 15px;
+  color: #2f3e36;
+  line-height: 1.7;
+  word-wrap: break-word;
+}
+
+/* Paragraph spacing */
+.news-content p {
+  margin-bottom: 10px;
+}
+
+/* Bullet points */
+.news-content ul {
+  padding-left: 18px;
+  margin: 10px 0;
+}
+
+.news-content li {
+  margin-bottom: 6px;
+}
+
+/* Line breaks from pasted text */
+.news-content br {
+  margin-bottom: 6px;
+}
+
+/* Bold headings */
+.news-content strong {
+  color: #145a32;
+}
+
+/* Handle long words/links */
+.news-content {
+  overflow-wrap: anywhere;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  .news-content {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+.tag {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 12px;
+  background: #e6f4ea;
+  color: #1e5631;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="nav-wrap">
+
+    <div class="brand">
+      <img src="images/logo rd.png" alt="Logo">
+      Forestry Gyan
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-links" id="navMenu">
+      <a href="aboutus.html">About</a>
+      <a href="vanikicapsule.html">Capsule</a>
+      <a href="resources.html">Resources</a>
+      <a href="news.html">News</a>
+      <a href="contribute.html">Contribute</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ===== MAIN ===== -->
+<div class="container">
+
+<h1>🌍 Daily Forestry News</h1>
+<p class="subtitle">Latest Forestry • Environment • Current Affairs for UPSC</p>
+
+<!-- 🔴 LATEST -->
+<div class="news-date">
+<div class="date-title">📅 21 April 2026</div>
+
+<div class="news-card">
+<div class="news-title">India’s forests could nearly double carbon storage by 2100, study finds
+</div>
+<div class="news-content"><p><strong>Context:</strong> A recent study has found that India’s forests could significantly increase their carbon storage capacity by the end of the century due to changing climate conditions and emission scenarios. :contentReference[oaicite:0]{index=0}</p>
+
+<p><strong>Key Findings:</strong></p>
+<ul>
+  <li>Forest carbon storage may increase by up to <strong>97% by 2100</strong> under high-emission scenarios.</li>
+  <li>National average forest carbon could rise substantially compared to historical levels.</li>
+  <li>Increase is projected across different emission pathways (low, medium, high).</li>
+</ul>
+
+<p><strong>Regional Variation:</strong></p>
+<ul>
+  <li>Semi-arid and dry regions may see higher increases in carbon storage.</li>
+  <li>Ecologically rich regions like the <strong>Western Ghats and Eastern Himalayas</strong> may show only modest gains.</li>
+</ul>
+
+<p><strong>Concerns:</strong></p>
+<ul>
+  <li>Higher carbon storage does not necessarily mean healthier forests.</li>
+  <li>Climate change may increase risks such as <strong>droughts, wildfires, and ecosystem stress</strong>.</li>
+  <li>Dense forests may become more vulnerable despite increased biomass.</li>
+</ul>
+
+<p><strong>Key Drivers:</strong></p>
+<ul>
+  <li>Rainfall is a major factor influencing forest carbon growth.</li>
+  <li>With higher emissions, <strong>temperature becomes a dominant factor</strong>.</li>
+</ul>
+
+<p><strong>UPSC Relevance:</strong></p>
+<ul>
+  <li>Important for topics: <strong>Carbon Sink, Climate Change, Forest Ecology</strong></li>
+  <li>Useful example for answers on <strong>nature-based solutions and climate mitigation</strong></li>
+</ul>
+
+</div></div>
+<div class="tag">Environment</div>
+</div>
+
+</div>
+
+<!-- 🟢 PREVIOUS 
+<div class="news-date">
+<div class="date-title">📅 20 April 2026</div>
+
+<div class="news-card">
+<div class="news-title">[Headline]</div>
+<div class="news-content">👉 Paste content...</div>
+<div class="tag">Forestry</div>
+</div>
+
+</div>
+
+<div class="news-date">
+<div class="date-title">📅 19 April 2026</div>
+
+<div class="news-card">
+<div class="news-title">[Headline]</div>
+<div class="news-content">👉 Paste content...</div>
+<div class="tag">Biodiversity</div>
+</div>
+
+</div>
+
+<div class="news-date">
+<div class="date-title">📅 18 April 2026</div>
+
+<div class="news-card">
+<div class="news-title">[Headline]</div>
+<div class="news-content">👉 Paste content...</div>
+<div class="tag">Climate</div>
+</div>
+
+</div>
+
+<div class="news-date">
+<div class="date-title">📅 17 April 2026</div>
+
+<div class="news-card">
+<div class="news-title">[Headline]</div>
+<div class="news-content">👉 Paste content...</div>
+<div class="tag">Wildlife</div>
+</div>
+
+</div>
+
+<div class="news-date">
+<div class="date-title">📅 16 April 2026</div>
+
+<div class="news-card">
+<div class="news-title">[Headline]</div>
+<div class="news-content">👉 Paste content...</div>
+<div class="tag">Policy</div>
+</div>
+
+</div>
+
+<div class="news-date">
+<div class="date-title">📅 15 April 2026</div>
+
+<div class="news-card">
+<div class="news-title">[Headline]</div>
+<div class="news-content">👉 Paste content...</div>
+<div class="tag">Environment</div>
+</div>
+
+</div>
+
+</div> -->
+
+<!-- ===== JS ===== -->
+<script>
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
