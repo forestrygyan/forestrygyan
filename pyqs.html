@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PYQs | Forestry Gyan</title>
+
+<style>
+
+/* ===== BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background:
+    linear-gradient(rgba(245,252,248,0.92), rgba(245,252,248,0.92)),
+    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e");
+  background-size: cover;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #1e5631;
+  padding: 16px 0;
+}
+
+.nav-wrap {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.brand img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-links a {
+  color: #eaf7f0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #ffffff;
+  margin: 4px 0;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .hamburger { display: flex; }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1e5631;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+  }
+
+  .nav-links.active { display: flex; }
+
+  .nav-links a {
+    width: 85%;
+    text-align: center;
+  }
+}
+
+/* ===== MAIN ===== */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.95);
+  padding: 50px 30px;
+  border-radius: 22px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease;
+}
+
+/* ICON */
+.icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+/* HEADINGS */
+h1 {
+  color: #1e5631;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #355e4a;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* PROGRESS BAR */
+.progress {
+  width: 100%;
+  background: #e6f4ea;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 10px;
+  margin: 25px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 60%;
+  background: #1e5631;
+  animation: load 2s ease;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  background: #1e5631;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ANIMATION */
+@keyframes load {
+  from { width: 0; }
+  to { width: 60%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-wrap">
+
+    <div class="brand">
+      <img src="images/logo rd.png">
+      Forestry Gyan
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="aboutus.html">About</a>
+      <a href="vanikicapsule.html">Capsule</a>
+      <a href="resources.html">Resources</a>
+      <a href="news.html">News</a>
+      <a href="pyqs.html">PYQs</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- MAIN -->
+<div class="container">
+
+  <div class="card">
+
+    <div class="icon">📄</div>
+
+    <h1>PYQs Section Coming Soon</h1>
+
+    <p class="subtitle">
+      We are building a powerful Previous Year Questions repository  
+      for UPSC, IFoS & State Forest Services 🌿
+    </p>
+
+    <div class="progress">
+      <div class="progress-bar"></div>
+    </div>
+
+    <p class="subtitle">
+      Stay tuned! This section will include topic-wise PYQs, solutions & analysis.
+    </p>
+
+    <a href="resources.html" class="btn">⬅ Back to Resources</a>
+
+  </div>
+
+</div>
+
+<!-- JS -->
+<script>
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
