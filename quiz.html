@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz | Forestry Gyan</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+/* ===== PAGE ===== */
+.quiz-page {
+    background: linear-gradient(135deg, #020617, #0f172a);
+    min-height: 100vh;
+    color: #f8fafc;
+}
+
+/* ===== NAVBAR FIX ===== */
+.navbar {
+    position: relative;
+    z-index: 1002;
+}
+
+/* ===== QUIZ CARD ===== */
+.quiz-container {
+    backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 80px auto;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+/* Question */
+#question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Options */
+.option {
+    display: block;
+    margin: 12px 0;
+    padding: 14px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.option:hover {
+    transform: scale(1.02);
+    background: rgba(16,185,129,0.15);
+}
+
+/* Correct/Wrong */
+.correct {
+    background: rgba(34,197,94,0.25) !important;
+    border: 1px solid #22c55e;
+}
+
+.wrong {
+    background: rgba(239,68,68,0.25) !important;
+    border: 1px solid #ef4444;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    cursor: pointer;
+}
+
+/* Score */
+.score {
+    margin-top: 15px;
+    color: #a7f3d0;
+}
+
+/* Progress */
+.progress-bar {
+    height: 6px;
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #22c55e, #4ade80);
+}
+
+/* Back */
+.back-home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-home a {
+    color: #34d399;
+    text-decoration: none;
+}
+
+</style>
+</head>
+
+<body class="quiz-page">
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+    <div class="container nav-wrap">
+
+        <div class="brand">
+            <img src="images/logo rd.png">
+            <span>Forestry Gyan</span>
+        </div>
+
+        <!-- Hamburger -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Links -->
+        <nav class="nav-links" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="News.html">News</a>
+            <a href="vanikicapsule.html">Vaniki Capsule</a>
+            <a href="contribute.html">Contribute</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+            <a href="resources.html">Resources</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- ===== QUIZ ===== -->
+<div class="quiz-container">
+
+    <h1>🌿 Forestry Quiz</h1>
+
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+
+    <h2 id="question">Loading...</h2>
+
+    <div id="options"></div>
+
+   <div class="quiz-buttons">
+    <button class="skip-btn" onclick="skipQuestion()">⏭ Skip</button>
+<button onclick="nextQuestion()">Next</button>
+</div>
+
+    <div class="score" id="score"></div>
+
+</div>
+
+<div class="back-home">
+    <a href="index.html">⬅ Back to Home</a>
+</div>
+
+<!-- ===== NAVBAR JS ===== -->
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+    document.querySelector(".hamburger").classList.toggle("active");
+}
+
+/* Click outside to close */
+document.addEventListener("click", function(e) {
+    const menu = document.getElementById("navMenu");
+    const burger = document.querySelector(".hamburger");
+
+    if (!menu.contains(e.target) && !burger.contains(e.target)) {
+        menu.classList.remove("active");
+        burger.classList.remove("active");
+    }
+});
+</script>
+
+<!-- QUIZ LOGIC -->
+<script src="quiz.js"></script>
+
+</body>
+</html>
