@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IFS Questions | Forestry Gyan</title>
+
+<style>
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+}
+
+/* ===== NAVBAR (SAME AS YOUR SITE) ===== */
+.navbar {
+  background: #1e5631;
+  padding: 16px 0;
+}
+
+.nav-wrap {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.brand img {
+  height: 40px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-links a {
+  color: #eaf7f0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #ffffff;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1e5631;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    border-radius: 0 0 16px 16px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 85%;
+    text-align: center;
+  }
+}
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.page-header h1 {
+  color: #1e5631;
+  font-size: 26px;
+}
+
+.page-header p {
+  color: #355e4a;
+}
+
+/* ===== QUESTIONS ===== */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.question {
+  background: rgba(255,255,255,0.95);
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  line-height: 1.7;
+}
+
+.question b {
+  color: #145a32;
+}
+
+.sub {
+  margin-left: 15px;
+  margin-top: 6px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="nav-wrap">
+
+    <div class="brand">
+      <img src="images/logo rd.png" alt="Logo">
+      Forestry Gyan
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-links" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="vanikicapsule.html">Capsule</a>
+      <a href="resources.html">Resources</a>
+      <a href="news.html">News</a>
+      <a href="contribute.html">Contribute</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ===== HEADER ===== -->
+<div class="page-header">
+  <h1>IFS Forestry Mains Questions</h1>
+
+</div>
+
+<!-- ===== QUESTIONS ===== -->
+<div class="container">
+
+<div class="question">
+<b>Q1.</b>
+<div class="sub">(a) What are the challenges in implementing traditional forest working plans in tribal and forest-dependent communities? Enlist the steps to overcome these challenges. (8)</div>
+<div class="sub">(b) What do you mean by tree height? Explain diagrammatically the method of height estimation on level as well as on sloping grounds using tangent method. (8)</div>
+<div class="sub">(c) Discuss the concept of sustained yield. How is it different from progressive yield on the basis of arguments given against sustained yield? (8)</div>
+<div class="sub">(d) Describe Von Mantel's formula of yield regulation. Enlist its advantages and disadvantages. (8)</div>
+<div class="sub">(e) Differentiate between yield tables and stand tables. Give objectives of stand table. (8)</div>
+</div>
+
+<div class="question">
+<b>Q2.</b>
+<div class="sub">(a) Critically examine the effectiveness of joint forest management in reconciling the goals of forest conservation and community livelihood security, in India. What institutional, ecological and socio-political challenges limit its long-term sustainability and scalability? (15)</div>
+<div class="sub">(b) Discuss the field work to be carried out by a Working Plan Officer for the preparation of Working Plan. (15)</div>
+<div class="sub">(c) What are cantilever bridges? Discuss the stability of cantilever bridges along with their disadvantages. (10)</div>
+</div>
+
+<!-- ADD MORE QUESTIONS SAME WAY -->
+<div class="question">
+<b>Q3.</b>
+<div class="sub">(a) Elucidate the scope and importance of forest management. How does choice of forest management objectives vary with ownership, locality, quality of forest produce and financial benefits? (15)</div>
+<div class="sub">(b) Discuss the objectives and scope of Forest Working Plan. Give the characteristics of a good working plan. Enlist the summary of facts on which proposals are based for their preparation. (15)</div>
+<div class="sub">(c) Explain stratified sampling and variable radius sampling methods. (10)</div>
+</div>
+
+<div class="question">
+<b>Q4.</b>
+<div class="sub">(a) Give objectives of diameter and girth measurement. Discuss the comparison between tape and calliper measurements. How are tree diameter classes formed in India? (15)</div>
+<div class="sub">(b) Discuss the environmental impact of road, tunnel and bridge construction in forest ecosystems. (15)</div>
+<div class="sub">(c) Discuss the importance of remote sensing and GIS in forest resource monitoring and their use for better checks and production of forest resources in long-term forest working. (10)</div>
+</div>
+
+<div class="question">
+<b>Q5.</b>
+<div class="sub">(a) What are the functional characteristics of an ecosystem? Briefly explain the process of energy flow within an ecosystem. (8)</div>
+<div class="sub">(b) Why is proper nomenclature crucial in studying medicinal and aromatic plants? (8)</div>
+<div class="sub">(c) What are the most effective strategies for balancing biodiversity conservation with sustainable resource utilization in forest ecosystems, especially in the face of climate change and increasing anthropogenic pressures? (8)</div>
+<div class="sub">(d) Explain (i) Water blister of teak, (ii) Gummosis of eucalyptus, (iii) Leaf crack, and (iv) Frost crack. (8)</div>
+<div class="sub">(e) In the context of current environmental and developmental pressures, how effective are the Forest (Conservation) Act, 1980 and the Wildlife (Protection) Act, 1972? What are the changes needed to enhance their impact? (8)</div>
+</div>
+
+<div class="question">
+<b>Q6.</b>
+<div class="sub">(a) How do India's forest ecosystems influence the therapeutic use and conservation of medicinal and aromatic plants in Ayurveda and Unani, considering their habitat specificity, ecological distribution and botanical traits? (15)</div>
+<div class="sub">(b) Define carbon sequestration. Mention two natural methods and one artificial method of carbon sequestration. How does ocean water contribute to carbon sequestration? (15)</div>
+<div class="sub">(c) How do production and consumption patterns of forest resources influence market structures? What methods can be employed to assess future projections for sustainable forest-based economic planning in India? (10)</div>
+</div>
+
+<div class="question">
+<b>Q7.</b>
+<div class="sub">(a) Describe the process and importance of wood seasoning. How do air and kiln seasoning methods differ? (15)</div>
+<div class="sub">(b) How do Indian forest policies address land use and resource management? What reforms are needed for sustainable and inclusive forest management? (15)</div>
+<div class="sub">(c) How does air pollution lead to forest dieback? Mention its causes and visible effects. (10)</div>
+</div>
+
+<div class="question">
+<b>Q8.</b>
+<div class="sub">(a) Define forest ecology. Briefly describe the key parameters of forest productivity and explain the methods used to determine ecosystem productivity. (15)</div>
+<div class="sub">(b) What are environmentally sound forest harvesting practices? Why are they important for sustainable forestry? (15)</div>
+<div class="sub">(c) How do cooperatives and the private sector shape forest economics and enhance the socio-economic well-being of forest-dependent communities through sustainable resource management, value addition and livelihood generation? (10)</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
