@@ -1202,3 +1202,70 @@ body {
 .skip-btn:hover {
     background: #475569;
 }
+
+/* ===== ANNOUNCEMENT BAR ===== */
+.announcement-bar {
+    width: 100%;
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.announcement-bar a {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.announcement-bar a:hover {
+    text-decoration: underline;
+}
+/* ===== NEW BADGE ===== */
+.new-badge {
+    background: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    margin-left: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+/* Blinking animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+/* Make tile a positioning container */
+.tile {
+    position: relative;
+}
+
+/* Corner badge */
+.new-badge.corner {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: red;
+    color: white;
+    font-size: 9px;
+    padding: 3px 6px;
+    border-radius: 6px;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+    z-index: 2;
+}
+
+/* Same animation as before */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
