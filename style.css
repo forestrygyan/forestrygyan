@@ -1205,25 +1205,38 @@ body {
 
 /* ===== ANNOUNCEMENT BAR ===== */
 .announcement-bar {
+    position: sticky;
+    top: 0;
     width: 100%;
     background: #ffffff;
     color: #000000;
     text-align: center;
     padding: 8px 10px;
     font-size: 14px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    z-index: 999; /* keep lower than navbar */
 }
 
+/* Links */
 .announcement-bar a {
     color: #000000;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
 }
 
 .announcement-bar a:hover {
     text-decoration: underline;
+}
+
+/* ===== HEADER / NAVBAR FIX ===== */
+header {
+    position: relative;
+    z-index: 1000; /* above announcement bar */
+}
+
+/* ===== HAMBURGER FIX ===== */
+.menu-toggle {
+    position: relative;
+    z-index: 1100; /* always clickable */
 }
 /* ===== NEW BADGE ===== */
 .new-badge {
@@ -1269,3 +1282,4 @@ body {
     50% { transform: scale(1.1); opacity: 0.7; }
     100% { transform: scale(1); opacity: 1; }
 }
+
