@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CUET PG Agroforestry PYQs | Forestry Gyan</title>
+
+<style>
+
+/* ===== BASE ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:"Segoe UI",sans-serif;
+  background:
+  linear-gradient(rgba(245,252,248,0.95),rgba(245,252,248,0.95)),
+  url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e");
+  background-size:cover;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{background:#1e5631;padding:16px 0;}
+.nav-wrap{
+  width:90%;max-width:1100px;margin:auto;
+  display:flex;justify-content:space-between;align-items:center;
+  position:relative;
+}
+
+.brand{
+  display:flex;align-items:center;gap:10px;
+  color:#fff;font-weight:700;font-size:18px;
+}
+.brand img{height:40px;}
+
+.nav-links{display:flex;gap:12px;}
+.nav-links a{
+  color:#fff;text-decoration:none;
+  padding:8px 14px;border-radius:8px;
+  border:1px solid rgba(255,255,255,0.3);
+}
+
+/* HAMBURGER */
+.hamburger{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+}
+.hamburger span{
+  width:26px;height:3px;background:#fff;margin:4px 0;
+}
+
+/* MOBILE NAV */
+@media(max-width:600px){
+
+  .hamburger{display:flex;}
+
+  .nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:#1e5631;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    padding:20px;
+    gap:12px;
+  }
+
+  .nav-links.active{display:flex;}
+
+  .nav-links a{
+    width:100%;
+    max-width:320px;
+    text-align:center;
+    padding:14px;
+    border-radius:12px;
+    background:#2e6b3f;
+  }
+}
+
+/* ===== MAIN ===== */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:80px 20px;
+}
+
+h1{
+  text-align:center;
+  color:#1e5631;
+  margin-bottom:10px;
+}
+
+.sub{
+  text-align:center;
+  color:#355e4a;
+  margin-bottom:40px;
+}
+
+/* TABLE CARD */
+.table-card{
+  background:#fff;
+  border-radius:18px;
+  padding:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+  overflow-x:auto;
+}
+
+/* TABLE */
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th, td{
+  padding:16px;
+  border-bottom:1px solid #eee;
+}
+
+th{
+  background:#1e5631;
+  color:#fff;
+  text-align:left;
+}
+
+td{
+  text-align:left;
+}
+
+/* ROW HOVER */
+tr:hover{
+  background:#f3faf5;
+}
+
+/* TITLE */
+.paper-title{
+  font-weight:600;
+  color:#1e5631;
+}
+
+/* BUTTON */
+.download-btn{
+  padding:7px 16px;
+  border-radius:20px;
+  background:#1e5631;
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.download-btn:hover{
+  background:#2e6b3f;
+}
+
+/* FOOTER */
+.footer{
+  background:#1e5631;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+  margin-top:60px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="nav-wrap">
+
+    <div class="brand">
+      <img src="images/logo rd.png" alt="Logo">
+      Forestry Gyan
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+
+    <nav class="nav-links" id="navMenu">
+      <a href="aboutus.html">About</a>
+      <a href="vanikicapsule.html">Capsule</a>
+      <a href="resources.html">Resources</a>
+      <a href="news.html">News</a>
+      <a href="contribute.html">Contribute</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ===== MAIN ===== -->
+<div class="container">
+
+<h1>🌱 CUET PG (Agroforestry)</h1>
+<p class="sub">Previous Year Question Papers (PYQs)</p>
+
+<div class="table-card">
+
+<table>
+
+<tr>
+  <th>Paper</th>
+  <th style="text-align:center;">Download</th>
+</tr>
+
+<tr>
+  <td class="paper-title">2025 – CUET PG Agroforestry</td>
+  <td style="text-align:center;">
+    <a href="cuetpg/AF 2025.pdf" class="download-btn">Download</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="paper-title">2024 – CUET PG Agroforestry</td>
+  <td style="text-align:center;">
+    <a href="cuetpg/AF 2024.pdf" class="download-btn">Download</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="paper-title">2023 – CUET PG Agroforestry</td>
+  <td style="text-align:center;">
+    <a href="cuetpg/AF 2023.pdf" class="download-btn">Download</a>
+  </td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+© 2026 Forestry Gyan | CUET PG Preparation 🌿
+</footer>
+
+<!-- ===== JS ===== -->
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
