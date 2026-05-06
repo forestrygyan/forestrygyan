@@ -113,17 +113,31 @@ color:white;">
 </div>-->
 
 
-   <!-- ===== QUESTION OF THE DAY WITH NAVIGATION ===== -->
-<div class="qotd-wrapper">
+<!-- ===== QUESTION OF THE DAY ===== -->
 
-    <button class="qotd-nav left" onclick="prevQuestion()">&#10094;</button>
+<div class="qotd-section">
 
     <div class="qotd-card">
-        <h2>🌿 Question of the Day</h2>
-        <p id="qotd-text"></p>
+
+        <div class="qotd-top">
+            <span class="qotd-badge">🌿 QUESTION OF THE DAY</span>
+        </div>
+
+        <p id="qotd-text" class="qotd-text"></p>
+
     </div>
 
-    <button class="qotd-nav right" onclick="nextQuestion()">&#10095;</button>
+    <div class="qotd-controls">
+
+        <button class="qotd-btn qotd-prev" onclick="prevQuestion()">
+            &#10094;
+        </button>
+
+        <button class="qotd-btn qotd-next" onclick="nextQuestion()">
+            &#10095;
+        </button>
+
+    </div>
 
 </div>
     <!-- ===== CONTRIBUTE TILE ===== -->
