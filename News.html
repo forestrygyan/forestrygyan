@@ -254,7 +254,12 @@ h1 {
 
 <h1>🌍 Daily Forestry & Environment News</h1>
 <p class="subtitle">Latest Forestry • Environment • Current Affairs for UPSC</p>
+<!-- ===== DATE FILTER ===== -->
+<div class="filter-box">
 
+  <input type="date" id="dateFilter">
+
+</div>
 <!-- 🔴 LATEST -->
    <div class="news-date">
   <div class="date-title">📅 06 May 2026</div>
@@ -3270,6 +3275,73 @@ function toggleMenu() {
   document.querySelector(".nav-links").classList.toggle("active");
 }
 </script>
+<script>
 
+/* ===== MOBILE MENU ===== */
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("active");
+}
+
+/* ===== DATE FILTER ===== */
+
+const dateFilter = document.getElementById("dateFilter");
+const newsCards = document.querySelectorAll(".news-card");
+
+function convertDate(dateText){
+
+  // Removes 📅 symbol
+  dateText = dateText.replace("📅", "").trim();
+
+  // Example: 06 May 2026
+  const parts = dateText.split(" ");
+
+  const day = parts[0];
+  const month = parts[1];
+  const year = parts[2];
+
+  const months = {
+    January:"01",
+    February:"02",
+    March:"03",
+    April:"04",
+    May:"05",
+    June:"06",
+    July:"07",
+    August:"08",
+    September:"09",
+    October:"10",
+    November:"11",
+    December:"12"
+  };
+
+  return `${year}-${months[month]}-${day.padStart(2,"0")}`;
+}
+
+function filterNews(){
+
+  const selectedDate = dateFilter.value;
+
+  newsCards.forEach(card => {
+
+    const parentDate =
+      card.closest(".news-date")
+      ?.querySelector(".date-title")
+      ?.innerText || "";
+
+    const formattedDate = convertDate(parentDate);
+
+    if(!selectedDate || formattedDate === selectedDate){
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+
+  });
+
+}
+
+dateFilter.addEventListener("change", filterNews);
+
+</script>
 </body>
 </html>
