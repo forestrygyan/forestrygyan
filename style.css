@@ -1423,27 +1423,74 @@ header {
 }
 
 
-/* ===== FILTER BOX ===== */
-.filter-box{
+/* ===== DATE SEARCH ===== */
+
+.date-search-box{
+  background:rgba(255,255,255,0.95);
+  padding:20px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
   margin-bottom:35px;
-  background:rgba(255,255,255,0.92);
-  padding:18px;
-  border-radius:16px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
 }
 
-.filter-box input{
-  width:100%;
-  padding:12px 14px;
-  border-radius:10px;
-  border:1px solid #cfe3d5;
-  font-size:14px;
-  outline:none;
-  background:#f8fffa;
+.date-search-box label{
+  font-size:15px;
+  font-weight:700;
   color:#1e5631;
 }
 
-.filter-box input:focus{
+.date-search-box input{
+  flex:1;
+  min-width:220px;
+
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid #d7e8dc;
+
+  font-size:14px;
+  background:#f8fffa;
+  color:#1e5631;
+  outline:none;
+
+  transition:0.25s;
+}
+
+.date-search-box input:focus{
   border-color:#1e5631;
-  box-shadow:0 0 0 3px rgba(30,86,49,0.12);
+  box-shadow:0 0 0 4px rgba(30,86,49,0.12);
+}
+
+.date-search-box button{
+  padding:12px 18px;
+  border:none;
+  border-radius:12px;
+  background:#1e5631;
+  color:white;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.25s;
+}
+
+.date-search-box button:hover{
+  transform:translateY(-2px);
+}
+
+@media(max-width:600px){
+
+  .date-search-box{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .date-search-box input,
+  .date-search-box button{
+    width:100%;
+  }
+
 }
