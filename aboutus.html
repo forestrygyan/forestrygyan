@@ -1,253 +1,934 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Forestry Gyan</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | Forestry Gyan</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
-/* Mobile menu hidden by default */
-.nav-links {
-    display: none;
-    flex-direction: column;
-    background: #1b4332; /* optional forest theme */
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    z-index: 999;
+
+/* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* Show when active */
-.nav-links.active {
-    display: flex;
+html{
+    scroll-behavior:smooth;
 }
 
-/* Hamburger cursor */
-.hamburger {
-    cursor: pointer;
+body{
+    font-family:Arial, sans-serif;
+    background:#081c15;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-/* Desktop view */
-@media (min-width: 768px) {
-    .nav-links {
-        display: flex !important;
-        flex-direction: row;
-        position: static;
-        background: none;
-        width: auto;
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(8,28,21,0.75);
+    backdrop-filter:blur(12px);
+    transition:0.4s;
+}
+
+.navbar.scrolled{
+    background:#081c15;
+    box-shadow:0 5px 25px rgba(0,0,0,0.5);
+}
+
+.nav-wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.brand img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.brand span{
+    font-size:1.4rem;
+    font-weight:700;
+    color:#fff;
+}
+
+/* ================= NAV LINKS ================= */
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#95d5b2;
+    transition:0.4s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.nav-links a:hover{
+    color:#95d5b2;
+}
+
+/* ================= HAMBURGER ================= */
+
+.hamburger{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+
+.hamburger span{
+    width:28px;
+    height:3px;
+    background:#fff;
+    border-radius:5px;
+}
+
+
+/* ================= HERO ================= */
+
+.about-hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1400&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.about-hero-content{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+    padding:20px;
+}
+
+.hero-badge{
+    display:inline-block;
+    background:rgba(255,255,255,0.1);
+    padding:10px 22px;
+    border-radius:50px;
+    margin-bottom:25px;
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.15);
+    font-size:0.95rem;
+}
+
+.about-hero h1{
+    font-size:4.3rem;
+    margin-bottom:20px;
+    animation:fadeUp 1s ease;
+}
+
+.about-hero p{
+    font-size:1.25rem;
+    line-height:1.8;
+    color:#d8f3dc;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.hero-btn{
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.primary-btn{
+    background:#2d6a4f;
+    color:#fff;
+}
+
+.primary-btn:hover{
+    background:#40916c;
+    transform:translateY(-5px);
+}
+
+.secondary-btn{
+    border:2px solid #95d5b2;
+    color:#fff;
+}
+
+.secondary-btn:hover{
+    background:#95d5b2;
+    color:#081c15;
+    transform:translateY(-5px);
+}
+
+/* ================= FLOATING LEAVES ================= */
+
+.leaf{
+    position:absolute;
+    color:#95d5b2;
+    opacity:0.4;
+    animation:floatLeaf 10s linear infinite;
+}
+
+.leaf1{
+    top:15%;
+    left:8%;
+    font-size:2rem;
+}
+
+.leaf2{
+    top:30%;
+    right:10%;
+    font-size:1.8rem;
+}
+
+.leaf3{
+    bottom:20%;
+    left:50%;
+    font-size:2.5rem;
+}
+
+/* ================= STATS ================= */
+
+.stats-section{
+    padding:90px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    background:#0b2e23;
+}
+
+.stats-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:45px 30px;
+    border-radius:25px;
+    text-align:center;
+    transition:0.4s;
+    backdrop-filter:blur(10px);
+}
+
+.stats-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+.stats-card i{
+    font-size:2.5rem;
+    color:#95d5b2;
+    margin-bottom:20px;
+}
+
+.stats-card h3{
+    margin-bottom:12px;
+    font-size:1.5rem;
+}
+
+.stats-card p{
+    color:#d8f3dc;
+}
+
+/* ================= FOUNDER ================= */
+
+.fg-founder{
+    padding:110px 8%;
+}
+
+.fg-founder-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.founder-image img{
+    width:100%;
+    border-radius:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.5);
+    transition:0.5s;
+}
+
+.founder-image img:hover{
+    transform:scale(1.03);
+}
+
+.founder-badge{
+    display:inline-block;
+    background:#2d6a4f;
+    padding:10px 20px;
+    border-radius:50px;
+    margin-bottom:25px;
+}
+
+.founder-content h2{
+    font-size:2.7rem;
+    margin-bottom:20px;
+}
+
+.founder-content p{
+    line-height:1.9;
+    color:#d8f3dc;
+    margin-bottom:20px;
+}
+
+.highlight-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+}
+
+.highlight-tags span{
+    background:rgba(255,255,255,0.08);
+    padding:12px 18px;
+    border-radius:50px;
+}
+
+/* ================= ABOUT CARDS ================= */
+
+.about-section{
+    padding:60px 0 110px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.about-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:40px 30px;
+    border-radius:30px;
+    transition:0.4s;
+    backdrop-filter:blur(10px);
+}
+
+.about-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+.card-icon{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#2d6a4f;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.8rem;
+    margin-bottom:20px;
+}
+
+.about-card h2{
+    margin-bottom:20px;
+}
+
+.about-card p,
+.about-card li{
+    color:#d8f3dc;
+    line-height:1.8;
+}
+
+.about-list{
+    list-style:none;
+}
+
+.about-list li{
+    margin-bottom:10px;
+}
+
+/* ================= CTA ================= */
+
+.about-cta{
+    position:relative;
+    padding:120px 8%;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+}
+
+.about-cta h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.about-cta p{
+    font-size:1.2rem;
+    margin-bottom:40px;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.btn{
+    padding:14px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.youtube{
+    background:#c1121f;
+}
+
+.instagram{
+    background:#8338ec;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+.cta-social-icons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.cta-social-icons a{
+    width:55px;
+    height:55px;
+    background:rgba(255,255,255,0.1);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    color:#fff;
+    font-size:1.2rem;
+    transition:0.4s;
+}
+
+.cta-social-icons a:hover{
+    background:#95d5b2;
+    color:#081c15;
+    transform:translateY(-6px);
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    width:100%;
+    background:#04110d;
+    padding-top:60px;
+}
+
+.footer-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+
+.footer-section h3{
+    margin-bottom:20px;
+}
+
+.footer-section p,
+.footer-section a{
+    color:#d8f3dc;
+    text-decoration:none;
+    line-height:2;
+}
+
+.footer-bottom{
+    margin-top:40px;
+    border-top:1px solid rgba(255,255,255,0.08);
+    text-align:center;
+    padding:25px 10px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes floatLeaf{
+
+    0%{
+        transform:translateY(0px) rotate(0deg);
     }
 
-    .hamburger {
-        display: none;
+    50%{
+        transform:translateY(-25px) rotate(15deg);
     }
+
+    100%{
+        transform:translateY(0px) rotate(0deg);
+    }
+
 }
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0px);
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .hamburger{
+        display:flex;
+    }
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#081c15;
+        padding:25px;
+        text-align:center;
+        gap:20px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .about-hero h1{
+        font-size:2.7rem;
+    }
+
+    .about-hero p{
+        font-size:1rem;
+    }
+
+    .fg-founder-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .founder-content h2{
+        font-size:2rem;
+    }
+
+    .about-cta h2{
+        font-size:2.2rem;
+    }
+
+}
+
 </style>
+
 </head>
 
-<body class="about-page">
+<body>
 
+<!-- ================= NAVBAR ================= -->
 
-<!-- ===== NAVBAR ===== -->
 <header class="navbar">
+
     <div class="container nav-wrap">
+
         <div class="brand">
-            <img src="logo rd.png" alt="Forestry Gyan Logo">
+            <img src="images/logo rd.png" alt="Logo">
             <span>Forestry Gyan</span>
         </div>
-  <!-- Hamburger Icon -->
+
         <div class="hamburger" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
 
-        <!-- Navigation Links -->
         <nav class="nav-links" id="navMenu">
-            <a href="index.html">Home</a>
-            <a href="vanikicapsule.html">Vaniki Capsule</a>
-            <a href="contribute.html">Contribute</a>
-            <a href="privacypolicy.html">Privacy Policy</a>
-            <a href="resources.html">Resources</a>
+            <a href="#">Home</a>
+            <a href="#">Vaniki Capsule</a>
+            <a href="#">Contribute</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Resources</a>
         </nav>
 
     </div>
-     
+
 </header>
 
+<!-- ================= HERO ================= -->
 
-<!-- ===== ABOUT HERO ===== -->
 <section class="about-hero">
-    <div class="about-hero-content">
-        <h1>About Forestry Gyan</h1>
-        <p>
-            Growing knowledge for sustainable forests and
-            exam-oriented learning 🌱
-        </p>
-    </div>
-</section>
-<!-- ===== ABOUT FOUNDER ===== -->
-<section class="fg-founder">
-    <div class="fg-founder__wrapper">
 
-        <!-- Founder Image -->
-        <div class="fg-founder__image">
-            <img src="about us.jpg" alt="Founder – Forestry Gyan">
+    <div class="leaf leaf1">
+        <i class="fa-solid fa-leaf"></i>
+    </div>
+
+    <div class="leaf leaf2">
+        <i class="fa-solid fa-leaf"></i>
+    </div>
+
+    <div class="leaf leaf3">
+        <i class="fa-solid fa-leaf"></i>
+    </div>
+
+    <div class="about-hero-content">
+
+        <span class="hero-badge">
+            🌿 Learn • Revise • Succeed
+        </span>
+
+        <h1>About Forestry Gyan</h1>
+
+        <p>
+            Growing knowledge for sustainable forests,
+            environmental awareness and exam-oriented learning.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#" class="hero-btn primary-btn">
+                Explore Community
+            </a>
+
+            <a href="#" class="hero-btn secondary-btn">
+                Study Resources
+            </a>
+
         </div>
 
-        <!-- Founder Text -->
-        <div class="fg-founder__content">
-            <span class="fg-founder__badge">Founder • Forestry Gyan</span>
-            <h2>Building Clarity in Forestry & Environment 🌿</h2>
+    </div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+
+<section class="stats-section">
+
+    <div class="stats-card">
+        <i class="fa-solid fa-tree"></i>
+        <h3>Forestry</h3>
+        <p>Concept Based Learning</p>
+    </div>
+
+    <div class="stats-card">
+        <i class="fa-solid fa-earth-asia"></i>
+        <h3>Environment</h3>
+        <p>Current Affairs Integrated</p>
+    </div>
+
+    <div class="stats-card">
+        <i class="fa-solid fa-book-open"></i>
+        <h3>UPSC / IFoS</h3>
+        <p>Exam Oriented Preparation</p>
+    </div>
+
+</section>
+
+<!-- ================= FOUNDER ================= -->
+
+<section class="fg-founder">
+
+    <div class="fg-founder-wrapper">
+
+        <div class="founder-image">
+            <img src="images/about us.jpg" alt="">
+        </div>
+
+        <div class="founder-content">
+
+            <span class="founder-badge">
+                Founder • Forestry Gyan
+            </span>
+
+            <h2>
+                Building Clarity in Forestry & Environment 🌿
+            </h2>
 
             <p>
                 Forestry Gyan was started with a simple vision —
-                to make <b>Forestry, Environment, and Ecology</b>
-                clear, accessible, and exam-oriented for aspirants.
+                to make Forestry, Environment and Ecology
+                clear, accessible and exam-oriented.
             </p>
 
             <p>
-                With a strong focus on <b>conceptual understanding, current relevance,
-                and answer-writing orientation</b>, the platform aims to support
-                aspirants preparing for <b>UPSC, IFoS, and State Forest Services</b>.
+                With strong focus on conceptual understanding,
+                current relevance and answer-writing orientation,
+                the platform supports aspirants preparing for
+                UPSC, IFoS and State Forest Services.
             </p>
+
+            <div class="highlight-tags">
+                <span>🌱 Concept Clarity</span>
+                <span>📚 Exam Focused</span>
+                <span>🌍 Environment Awareness</span>
+            </div>
+
         </div>
 
     </div>
+
 </section>
-<!-- ===== ABOUT CONTENT ===== -->
+
+<!-- ================= ABOUT CARDS ================= -->
+
 <section class="about-section container">
 
     <div class="about-card">
-        <h2>🌿 Who We Are</h2>
+
+        <div class="card-icon">
+            <i class="fa-solid fa-seedling"></i>
+        </div>
+
+        <h2>Who We Are</h2>
+
         <p>
-            <strong>Forestry Gyan</strong> is an independent learning initiative
-            dedicated to students and aspirants preparing for
-            <strong>UPSC, IFoS, State Forest Services</strong>, and other
-            environment-related examinations.
+            Forestry Gyan is an independent learning initiative
+            dedicated to aspirants preparing for UPSC,
+            IFoS and State Forest Services.
         </p>
-        <p>
-            We focus on delivering <strong>concept-based, exam-oriented,
-            and current-affairs-integrated</strong> content related to
-            forestry, environment, ecology, biodiversity, and conservation.
-        </p>
+
     </div>
 
     <div class="about-card">
-        <h2>🎯 Our Mission</h2>
+
+        <div class="card-icon">
+            <i class="fa-solid fa-bullseye"></i>
+        </div>
+
+        <h2>Our Mission</h2>
+
         <p>
-            To make <strong>quality forestry and environmental education</strong>
-            accessible, simplified, and freely available for every serious
-            aspirant across India.
+            To make quality forestry and environmental
+            education simplified, accessible and freely available.
         </p>
+
     </div>
 
     <div class="about-card">
-        <h2>🌱 What We Offer</h2>
+
+        <div class="card-icon">
+            <i class="fa-solid fa-book"></i>
+        </div>
+
+        <h2>What We Offer</h2>
+
         <ul class="about-list">
-            <li>✔ Conceptual forestry & environment notes</li>
-            <li>✔ Question of the Day (Prelims & Mains focused)</li>
-            <li>✔ Current affairs related to environment & forestry</li>
-            <li>✔ Infographics, PDFs, and visual learning tools</li>
-            <li>✔ Exam-oriented explanations for UPSC & IFoS</li>
+            <li>✔ Forestry & Environment Notes</li>
+            <li>✔ Question of the Day</li>
+            <li>✔ Current Affairs</li>
+            <li>✔ Infographics & PDFs</li>
+            <li>✔ UPSC & IFoS Preparation</li>
         </ul>
+
     </div>
 
     <div class="about-card">
-        <h2>🤝 Our Philosophy</h2>
+
+        <div class="card-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+        </div>
+
+        <h2>Our Philosophy</h2>
+
         <p>
-            We believe that <strong>strong fundamentals + regular revision +
-            relevance to current affairs</strong> are the keys to cracking
-            competitive examinations.
+            Strong fundamentals + regular revision +
+            current relevance are the keys to success
+            in competitive examinations.
         </p>
-        <p>
-            Forestry Gyan aims to bridge the gap between
-            <strong>academic forestry</strong> and
-            <strong>exam-oriented application</strong>.
-        </p>
+
     </div>
 
 </section>
 
-<!-- ===== CTA SECTION ===== -->
+<!-- ================= CTA ================= -->
+
 <section class="about-cta">
+
     <h2>Join the Forestry Gyan Community 🌳</h2>
+
     <p>
-        Learn • Revise • Succeed — together
+        Learn • Revise • Succeed — Together
     </p>
 
-    <!-- Main CTA Buttons -->
     <div class="cta-buttons">
+
         <a href="https://youtube.com/@forestrygyan" target="_blank" class="btn youtube">
-            ▶ YouTube
+            <i class="fa-brands fa-youtube"></i>
+            YouTube
         </a>
+
         <a href="https://instagram.com/forestry._.gyan" target="_blank" class="btn instagram">
-            📸 Instagram
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
         </a>
+
     </div>
 
-   <!-- Social Icons -->
     <div class="cta-social-icons">
-        <a href="https://www.facebook.com/share/1N9ZgKcscu/" target="_blank" aria-label="Facebook">
+
+        <a href="#">
             <i class="fa-brands fa-facebook-f"></i>
         </a>
 
-        <a href="https://chat.whatsapp.com/J6eFHr0ogwS0PXrIfbllTN" target="_blank" aria-label="WhatsApp">
+        <a href="#">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
 
-        <a href="https://t.me/forestrygyan" target="_blank" aria-label="Telegram">
+        <a href="#">
             <i class="fa-brands fa-telegram"></i>
         </a>
 
-        <a href="mailto:forestrygyan@gmail.com" aria-label="Email">
+        <a href="#">
             <i class="fa-solid fa-envelope"></i>
         </a>
+
     </div>
+
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- ================= FOOTER ================= -->
+
 <footer class="footer">
+
     <div class="footer-container">
 
         <div class="footer-section">
+
             <h3>Forestry Gyan</h3>
+
             <p>
-                A learning platform for Forestry, Environment &
-                UPSC–IFoS preparation.
+                Learning platform for Forestry,
+                Environment & UPSC–IFoS preparation.
             </p>
+
         </div>
 
         <div class="footer-section">
+
             <h3>Contact</h3>
+
             <p>📍 India</p>
             <p>📧 forestrygyan@gmail.com</p>
+            <p>📞 +91-XXXXXXXXXX</p>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h3>Quick Links</h3>
+
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Disclaimer</a></p>
+            <p><a href="#">Contact Us</a></p>
+
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026 Forestry Gyan | Growing knowledge for sustainable forests 🌱</p>
+        <p>
+            © 2026 Forestry Gyan |
+            Growing knowledge for sustainable forests 🌱
+        </p>
     </div>
+
 </footer>
+
 <script>
-function toggleMenu() {
-    const menu = document.getElementById("navMenu");
+
+function toggleMenu(){
+
+    const menu=document.getElementById("navMenu");
     menu.classList.toggle("active");
+
 }
 
-// Optional: close menu after clicking a link
-document.querySelectorAll("#navMenu a").forEach(link => {
-    link.addEventListener("click", () => {
-        document.getElementById("navMenu").classList.remove("active");
-    });
+window.addEventListener("scroll",function(){
+
+    const navbar=document.querySelector(".navbar");
+
+    if(window.scrollY>50){
+        navbar.classList.add("scrolled");
+    }
+    else{
+        navbar.classList.remove("scrolled");
+    }
+
 });
+
+document.querySelectorAll("#navMenu a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        document.getElementById("navMenu").classList.remove("active");
+
+    });
+
+});
+
 </script>
+
 </body>
 </html>
-
-
-
-
-
