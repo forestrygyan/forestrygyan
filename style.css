@@ -1422,3 +1422,28 @@ header {
     100% { transform: scale(1); opacity: 1; }
 }
 
+
+/* ===== FILTER BOX ===== */
+.filter-box{
+  margin-bottom:35px;
+  background:rgba(255,255,255,0.92);
+  padding:18px;
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+.filter-box input{
+  width:100%;
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid #cfe3d5;
+  font-size:14px;
+  outline:none;
+  background:#f8fffa;
+  color:#1e5631;
+}
+
+.filter-box input:focus{
+  border-color:#1e5631;
+  box-shadow:0 0 0 3px rgba(30,86,49,0.12);
+}
