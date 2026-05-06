@@ -255,10 +255,14 @@ h1 {
 
 <h1>🌍 Daily Forestry & Environment News</h1>
 <p class="subtitle">Latest Forestry • Environment • Current Affairs for UPSC</p>
-<!-- ===== DATE FILTER ===== -->
-<div class="filter-box">
+<!-- ===== DATE SEARCH BAR ===== -->
+<div class="date-search-box">
+
+  <label for="dateFilter">📅 Search News By Date</label>
 
   <input type="date" id="dateFilter">
+
+  <button onclick="clearDateSearch()">Clear</button>
 
 </div>
 <!-- 🔴 LATEST -->
@@ -3286,14 +3290,12 @@ function toggleMenu() {
 /* ===== DATE FILTER ===== */
 
 const dateFilter = document.getElementById("dateFilter");
-const newsCards = document.querySelectorAll(".news-card");
+const newsDateSections = document.querySelectorAll(".news-date");
 
 function convertDate(dateText){
 
-  // Removes 📅 symbol
   dateText = dateText.replace("📅", "").trim();
 
-  // Example: 06 May 2026
   const parts = dateText.split(" ");
 
   const day = parts[0];
@@ -3318,30 +3320,38 @@ function convertDate(dateText){
   return `${year}-${months[month]}-${day.padStart(2,"0")}`;
 }
 
-function filterNews(){
+function filterByDate(){
 
   const selectedDate = dateFilter.value;
 
-  newsCards.forEach(card => {
+  newsDateSections.forEach(section => {
 
-    const parentDate =
-      card.closest(".news-date")
-      ?.querySelector(".date-title")
-      ?.innerText || "";
+    const dateTitle =
+      section.querySelector(".date-title")?.innerText || "";
 
-    const formattedDate = convertDate(parentDate);
+    const convertedDate = convertDate(dateTitle);
 
-    if(!selectedDate || formattedDate === selectedDate){
-      card.style.display = "block";
+    if(!selectedDate || convertedDate === selectedDate){
+      section.style.display = "block";
     } else {
-      card.style.display = "none";
+      section.style.display = "none";
     }
 
   });
 
 }
 
-dateFilter.addEventListener("change", filterNews);
+function clearDateSearch(){
+
+  dateFilter.value = "";
+
+  newsDateSections.forEach(section => {
+    section.style.display = "block";
+  });
+
+}
+
+dateFilter.addEventListener("change", filterByDate);
 
 </script>
 </body>
