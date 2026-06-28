@@ -532,7 +532,7 @@ answer: 1
 q: "Geo-stationary satellite revolves at distance of:",
 table: [],
 end: "",
-options: ["800 km","1200 km","6400 km","22000 km"],
+options: ["800 km","1200 km","6400 km","36000 km"],
 answer: 3
 },
 
