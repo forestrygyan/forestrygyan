@@ -545,10 +545,10 @@ answer: 1
 },
 
 {
-q: "Mosses headquarters is:",
+q: "Gland headquarters is:",
 table: [],
 end: "",
-options: ["ICFRE","IUCN","ICAR","WWF"],
+options: ["ICFRE","IUCN","ICAR","WII"],
 answer: 1
 },
 
