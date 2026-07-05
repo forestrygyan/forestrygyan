@@ -1,1135 +1,718 @@
-const quiz = [
-
-/* ===== 2025 ===== */
-{
-q: "With reference to the planet Earth, consider the following statements:",
-table: [
-"I. Rain forests produce more oxygen than that produced by oceans.",
-"II. Marine phytoplankton and photosynthetic bacteria produce about 50% of world’s oxygen.",
-"III. Well-oxygenated surface water contains several folds higher oxygen than that in atmospheric air."
-],
-end: "Which of the statements given above is/are correct?",
-options: ["I and II","II only","I and III","None of the above"],
-answer: 1
-},
-
-{
-q: "Regarding Peacock tarantula (Gooty tarantula), consider the following statements:",
-table: [
-"I. It is an omnivorous crustacean.",
-"II. Its natural habitat in India is only limited to some forest areas.",
-"III. In its natural habitat, it is an arboreal species."
-],
-end: "Which of the statements given above is/are correct?",
-options: ["I only","I and III","II only","II and III"],
-answer: 3
-},
-
-{
-q: "Consider the following pairs:",
-table: [
-"I. Cassava : Woody shrub",
-"II. Ginger : Herb with pseudostem",
-"III. Malabar spinach : Herbaceous climber",
-"IV. Mint : Annual shrub",
-"V. Papaya : Woody shrub"
-],
-end: "How many pairs are correctly matched?",
-options: ["Only two","Only three","Only four","All five"],
-answer: 2
-},
-
-{
-q: "Consider the following fruits:",
-table: [
-"I. Papaya",
-"II. Pineapple",
-"III. Guava"
-],
-end: "How many were introduced by Portuguese?",
-options: ["Only one","Only two","All three","None"],
-answer: 1
-},
-
-/* ===== 2024 ===== */
-{
-q: "Consider the following:",
-table: [
-"1. Carabid beetles",
-"2. Centipedes",
-"3. Flies",
-"4. Termites",
-"5. Wasps"
-],
-end: "Parasitoid species found in how many?",
-options: ["Only two","Only three","Only four","All five"],
-answer: 3
-},
-
-{
-q: "Consider the following plants:",
-table: [
-"1. Groundnut",
-"2. Horse-gram",
-"3. Soybean"
-],
-end: "Belong to pea family?",
-options: ["Only one","Only two","All three","None"],
-answer: 2
-},
-
-{
-q: "Cicada, Froghopper, Pond skater are:",
-table: [],
-end: "",
-options: ["Birds","Fish","Insects","Reptiles"],
-answer: 2
-},
-
-{
-q: "Consider the following pairs:",
-table: [
-"1. Brazil – Indri",
-"2. Indonesia – Elk",
-"3. Madagascar – Bonobo"
-],
-end: "Correctly matched?",
-options: ["Only one","Only two","All three","None"],
-answer: 3
-},
-
-{
-q: "Big cat statements:",
-table: [
-"1. Lions have no fixed breeding season",
-"2. Cheetahs do not roar",
-"3. Leopards do not scent mark"
-],
-end: "Correct statements?",
-options: ["1 and 2","2 and 3","1 and 3","All"],
-answer: 0
-},
-
-{
-q: "Unique pollination relationship:",
-table: [],
-end: "",
-options: ["Fig","Mahua","Sandalwood","Silk cotton"],
-answer: 0
-},
-
-{
-q: "Poisonous species found in:",
-table: [
-"1. Butterflies",
-"2. Fish",
-"3. Frogs"
-],
-end: "",
-options: ["Only one","Only two","All three","None"],
-answer: 2
-},
-
-{
-q: "Consider the following statements:",
-table: [
-"Statement I: Indian Flying Fox is vermin",
-"Statement II: It feeds on blood"
-],
-end: "Correct statement?",
-options: [
-"Both correct & II explains I",
-"Both correct but no explanation",
-"I correct, II incorrect",
-"I incorrect, II correct"
-],
-answer: 3
-},
-
-{
-q: "Consider the following:",
-table: [
-"1. Cashew",
-"2. Papaya",
-"3. Red sanders"
-],
-end: "Native to India?",
-options: ["Only one","Only two","All three","None"],
-answer: 0
-},
-    /* ===== FORESTRY / BIO / GENERAL ===== */
-
-{
-q: "Hybridoma technology is used in the production of:",
-table: [],
-end: "",
-options: ["Hybrid plants","Monoclonal antibodies","Monoclonal serum","Polyclonal antibodies"],
-answer: 1
-},
-
-{
-q: "Spike disease in sandal is caused by:",
-table: [],
-end: "",
-options: ["Fungi","Bacteria","Mycoplasma","Insect"],
-answer: 2
-},
-
-{
-q: "Forest Conservation Act was formed in:",
-table: [],
-end: "",
-options: ["1927","1827","1985","1980"],
-answer: 3
-},
-
-{
-q: "Latest forest policy was formulated in the year:",
-table: [],
-end: "",
-options: ["1898","1894","1984","2011"],
-answer: 2
-},
-
-{
-q: "World Environment Day is celebrated on:",
-table: [],
-end: "",
-options: ["5 July","11 July","16 September","5 June"],
-answer: 3
-},
-
-{
-q: "Biodiesel plant is:",
-table: [],
-end: "",
-options: ["Jatropha","Madhuca","Azadirachta","Aloe"],
-answer: 0
-},
-
-{
-q: "Transition zone between two communities is called:",
-table: [],
-end: "",
-options: ["Climax zone","Ecotone","Edge","Succession"],
-answer: 1
-},
-
-{
-q: "Which base is found only in RNA?",
-table: [],
-end: "",
-options: ["Adenine","Guanine","Thymine","Uracil"],
-answer: 3
-},
-
-{
-q: "Which cell organelle has stroma and grana lamellae?",
-table: [],
-end: "",
-options: ["Nucleus","Chloroplast","Ribosome","Endoplasmic reticulum"],
-answer: 1
-},
-
-{
-q: "Ozone depleting factor is:",
-table: [],
-end: "",
-options: ["Carbon dioxide","Sulphuric acid","Carbon monoxide","Chlorofluorocarbon"],
-answer: 3
-},
-
-{
-q: "Alternative source of fuel energy is:",
-table: [],
-end: "",
-options: ["CNG","Biogas","Propane","All of these"],
-answer: 3
-},
-
-{
-q: "ICFRE was formed in the year:",
-table: [],
-end: "",
-options: ["1991","1919","1920","1927"],
-answer: 0
-},
-
-{
-q: "Indian Institute of Forest Management is situated in:",
-table: [],
-end: "",
-options: ["Jaipur","Dehradun","Ranchi","Bhopal"],
-answer: 3
-},
-
-{
-q: "Soil having pH 3.2 is:",
-table: [],
-end: "",
-options: ["Acidic","Alkaline","Basic","Acidic-alkaline"],
-answer: 0
-},
-
-{
-q: "Particle density is higher than:",
-table: [],
-end: "",
-options: ["Bulk density","Fluid density","Real density","Soil density"],
-answer: 0
-},
-
-{
-q: "Transfer of pollen from anther to stigma of another flower is:",
-table: [],
-end: "",
-options: ["Autogamy","Allogamy","Geitonogamy","Both a and c"],
-answer: 1
-},
-
-{
-q: "Noise pollution is measured in:",
-table: [],
-end: "",
-options: ["Hertz","Decibel","Amplitude","Centimetre"],
-answer: 1
-},
-
-{
-q: "Example of height measuring instrument:",
-table: [],
-end: "",
-options: ["Barometer","Spiegel Relaskop","Hygrometer","Dendrometer"],
-answer: 1
-},
-
-{
-q: "The canopy range of dense forest is:",
-table: [],
-end: "",
-options: ["All same","More than one","Equal to one","None"],
-answer: 1
-},
-
-{
-q: "Geo-stationary satellite revolves at distance of:",
-table: [],
-end: "",
-options: ["800 km","1200 km","6400 km","22000 km"],
-answer: 3
-},
-
-{
-q: "Scientific name of Red Panda is:",
-table: [],
-end: "",
-options: ["Panthera uncia","Ailurus fulgens","Panthera leo","Gazella gazella"],
-answer: 1
-},
-
-{
-q: "Mosses headquarters is:",
-table: [],
-end: "",
-options: ["ICFRE","IUCN","ICAR","WWF"],
-answer: 1
-},
-
-{
-q: "Jhum cultivation is common in:",
-table: [],
-end: "",
-options: ["North-east","Western","Southern","Eastern-west"],
-answer: 0
-},
-
-{
-q: "Which revolution is related to milk production?",
-table: [],
-end: "",
-options: ["Green revolution","White revolution","Blue revolution","Red revolution"],
-answer: 1
-},
-
-{
-q: "World Biodiversity Day is celebrated on:",
-table: [],
-end: "",
-options: ["May 22","June 5","June 8","July 11"],
-answer: 0
-},
-
-{
-q: "Hydrosere refers to:",
-table: [],
-end: "",
-options: ["Succession in fresh water","Succession in dry region","Succession in rock","Succession in saline water"],
-answer: 0
-},
-
-{
-q: "Correlation coefficient ranges between:",
-table: [],
-end: "",
-options: ["0 to ∞","-1 to +1","0 to 1","-∞ to +∞"],
-answer: 1
-},
-/* ===== FORESTRY / BIO / GENERAL ===== */
-
-{
-q: "Hybridoma technology is used in the production of:",
-table: [],
-end: "",
-options: ["Hybrid plants","Monoclonal antibodies","Monoclonal serum","Polyclonal antibodies"],
-answer: 1
-},
-
-{
-q: "Spike disease in sandal is caused by:",
-table: [],
-end: "",
-options: ["Fungi","Bacteria","Mycoplasma","Insect"],
-answer: 2
-},
-
-{
-q: "Forest Conservation Act was formed in:",
-table: [],
-end: "",
-options: ["1927","1827","1985","1980"],
-answer: 3
-},
-
-{
-q: "Latest forest policy was formulated in the year:",
-table: [],
-end: "",
-options: ["1898","1894","1984","2011"],
-answer: 2
-},
-
-{
-q: "World Environment Day is celebrated on:",
-table: [],
-end: "",
-options: ["5 July","11 July","16 September","5 June"],
-answer: 3
-},
-
-{
-q: "Biodiesel plant is:",
-table: [],
-end: "",
-options: ["Jatropha","Madhuca","Azadirachta","Aloe"],
-answer: 0
-},
-
-{
-q: "Transition zone between two communities is called:",
-table: [],
-end: "",
-options: ["Climax zone","Ecotone","Edge","Succession"],
-answer: 1
-},
-
-{
-q: "Which base is found only in RNA?",
-table: [],
-end: "",
-options: ["Adenine","Guanine","Thymine","Uracil"],
-answer: 3
-},
-
-{
-q: "Which cell organelle has stroma and grana lamellae?",
-table: [],
-end: "",
-options: ["Nucleus","Chloroplast","Ribosome","Endoplasmic reticulum"],
-answer: 1
-},
-
-{
-q: "Ozone depleting factor is:",
-table: [],
-end: "",
-options: ["Carbon dioxide","Sulphuric acid","Carbon monoxide","Chlorofluorocarbon"],
-answer: 3
-},
-
-{
-q: "Alternative source of fuel energy is:",
-table: [],
-end: "",
-options: ["CNG","Biogas","Propane","All of these"],
-answer: 3
-},
-
-{
-q: "ICFRE was formed in the year:",
-table: [],
-end: "",
-options: ["1991","1919","1920","1927"],
-answer: 0
-},
-
-{
-q: "Indian Institute of Forest Management is situated in:",
-table: [],
-end: "",
-options: ["Jaipur","Dehradun","Ranchi","Bhopal"],
-answer: 3
-},
-
-{
-q: "Soil having pH 3.2 is:",
-table: [],
-end: "",
-options: ["Acidic","Alkaline","Basic","Acidic-alkaline"],
-answer: 0
-},
-
-{
-q: "Particle density is higher than:",
-table: [],
-end: "",
-options: ["Bulk density","Fluid density","Real density","Soil density"],
-answer: 0
-},
-
-{
-q: "Transfer of pollen from anther to stigma of another flower is:",
-table: [],
-end: "",
-options: ["Autogamy","Allogamy","Geitonogamy","Both a and c"],
-answer: 1
-},
-
-{
-q: "Noise pollution is measured in:",
-table: [],
-end: "",
-options: ["Hertz","Decibel","Amplitude","Centimetre"],
-answer: 1
-},
-
-{
-q: "Example of height measuring instrument:",
-table: [],
-end: "",
-options: ["Barometer","Spiegel Relaskop","Hygrometer","Dendrometer"],
-answer: 1
-},
-
-{
-q: "The canopy range of dense forest is:",
-table: [],
-end: "",
-options: ["All same","More than one","Equal to one","None"],
-answer: 1
-},
-
-{
-q: "Geo-stationary satellite revolves at distance of:",
-table: [],
-end: "",
-options: ["800 km","1200 km","6400 km","36000 km"],
-answer: 3
-},
-
-{
-q: "Scientific name of Red Panda is:",
-table: [],
-end: "",
-options: ["Panthera uncia","Ailurus fulgens","Panthera leo","Gazella gazella"],
-answer: 1
-},
-
-{
-q: "Gland headquarters is:",
-table: [],
-end: "",
-options: ["ICFRE","IUCN","ICAR","WII"],
-answer: 1
-},
-
-{
-q: "Jhum cultivation is common in:",
-table: [],
-end: "",
-options: ["North-east","Western","Southern","Eastern-west"],
-answer: 0
-},
-
-{
-q: "Which revolution is related to milk production?",
-table: [],
-end: "",
-options: ["Green revolution","White revolution","Blue revolution","Red revolution"],
-answer: 1
-},
-
-{
-q: "World Biodiversity Day is celebrated on:",
-table: [],
-end: "",
-options: ["May 22","June 5","June 8","July 11"],
-answer: 0
-},
-
-{
-q: "Hydrosere refers to:",
-table: [],
-end: "",
-options: ["Succession in fresh water","Succession in dry region","Succession in rock","Succession in saline water"],
-answer: 0
-},
-
-{
-q: "Correlation coefficient ranges between:",
-table: [],
-end: "",
-options: ["0 to ∞","-1 to +1","0 to 1","-∞ to +∞"],
-answer: 1
-},
-
-{
-q:"Cuscuta reflexa is an example of:",
-table:[],
-end:"",
-options:[
-"Total root parasite",
-"Total stem parasite",
-"Partial stem parasite",
-"Partial root parasite"
-],
-answer:1
-},
-
-{
-q:"A shoot arising from an adventitious bud at the base of a woody plant cut near the ground is known as:",
-table:[],
-end:"",
-options:[
-"Cutting",
-"Layering",
-"Root sucker",
-"Coppice"
-],
-answer:3
-},
-
-{
-q:"Quercus incana is a:",
-table:[],
-end:"",
-options:[
-"Light demander",
-"Shade demander",
-"Shade bearer",
-"Shade tolerant"
-],
-answer:0
-},
-
-{
-q:"The theory of Plant Succession was proposed by:",
-table:[],
-end:"",
-options:[
-"Richard Peters",
-"Dawson",
-"Thoreau",
-"Clements"
-],
-answer:3
-},
-
-{
-q:"Which of the following is a strong coppicer?",
-table:[],
-end:"",
-options:[
-"Butea monosperma",
-"Dalbergia sissoo",
-"Both a and b",
-"None of the above"
-],
-answer:2
-},
-
-{
-q:"A species that first invades a newly exposed area is called:",
-table:[],
-end:"",
-options:[
-"Pioneer species",
-"Secondary species",
-"Autoecology",
-"Sere"
-],
-answer:0
-},
-
-{
-q:"Forest succession term was given by:",
-table:[],
-end:"",
-options:[
-"Clements",
-"Thoreau",
-"Aubréville",
-"Whittaker"
-],
-answer:0
-},
-
-{
-q:"Which of the following shows dispersal mainly by gravity?",
-table:[],
-end:"",
-options:[
-"Ficus benghalensis",
-"Bombax ceiba",
-"Tectona grandis",
-"Juglans regia"
-],
-answer:3
-},
-
-{
-q:"Die-back disease commonly occurs in:",
-table:[],
-end:"",
-options:[
-"Pinus roxburghii",
-"Shorea robusta",
-"Acacia nilotica",
-"Bauhinia variegata"
-],
-answer:1
-},
-
-{
-q:"Which of the following is NOT an agroforestry system?",
-table:[],
-end:"",
-options:[
-"Agrisilvipastoral system",
-"Agrisilviaquaculture system",
-"Reforestation system",
-"Agrihorticulture system"
-],
-answer:2
-},
-
-{
-q:"Which component is NOT included in an Agrisilviaquaculture system?",
-table:[],
-end:"",
-options:[
-"Trees",
-"Agricultural crops",
-"Fish",
-"Livestock"
-],
-answer:3
-},
-
-{
-q:"Which tree species is generally NOT suitable for agroforestry?",
-table:[],
-end:"",
-options:[
-"Poplar",
-"Bamboo",
-"Teak",
-"Deodar"
-],
-answer:3
-},
-
-{
-q:"Multiple cropping refers to raising:",
-table:[],
-end:"",
-options:[
-"Two or more crops on the same land",
-"Two crops on different lands",
-"One crop every year",
-"Mixed forestry only"
-],
-answer:0
-},
-
-{
-q:"Apiculture in agroforestry deals with:",
-table:[],
-end:"",
-options:[
-"Trees and bees",
-"Trees and fish",
-"Trees, crops and fish",
-"All of these"
-],
-answer:0
-},
-
-{
-q:"Which species is generally unsuitable for agroforestry in plain areas?",
-table:[],
-end:"",
-options:[
-"Acacia auriculiformis",
-"Mesua ferrea",
-"Mangifera indica",
-"Pinus spp."
-],
-answer:3
-},
-
-{
-q:"Shelterbelts primarily function to:",
-table:[],
-end:"",
-options:[
-"Reduce wind velocity",
-"Reduce snow velocity",
-"Reduce fire velocity",
-"All of the above"
-],
-answer:0
-},
-
-{
-q:"Poplar plantations in agroforestry mainly supply raw material to:",
-table:[],
-end:"",
-options:[
-"Match industry",
-"Rubber industry",
-"Board industry",
-"All of the above"
-],
-answer:0
-},
-
-{
-q:"Alley cropping is best suited for:",
-table:[],
-end:"",
-options:[
-"Desert areas",
-"Plain areas",
-"Rocky areas",
-"Sloping terrain"
-],
-answer:3
-},
-
-{
-q:"Agroforestry practices should be designed on a:",
-table:[],
-end:"",
-options:[
-"Short-term basis",
-"Medium-term basis",
-"Long-term basis",
-"None of the above"
-],
-answer:2
-},
-
-{
-q:"Grewia optiva is extensively used as:",
-table:[],
-end:"",
-options:[
-"Fodder",
-"Fuelwood",
-"Gum",
-"Resin"
-],
-answer:0
-},
-
-{
-q:"Triangulation in extension means:",
-table:[],
-end:"",
-options:[
-"Villagers' choice",
-"Matrix ranking",
-"Cross-checking of data",
-"Key informant"
-],
-answer:2
-},
-
-{
-q:"Criteria and Indicators (C&I) of forests are related to:",
-table:[],
-end:"",
-options:[
-"Progressive yield",
-"Forest management",
-"Sustainable Forest Management",
-"Joint Forest Management"
-],
-answer:2
-},
-
-{
-q:"The silvicultural system best suited for steep hill slopes and rugged terrain is:",
-table:[],
-end:"",
-options:[
-"Selection system",
-"Coppice system",
-"Shelterwood system",
-"None of the above"
-],
-answer:1
-},
-
-{
-q:"Pollarding is mainly practiced:",
-table:[],
-end:"",
-options:[
-"To promote natural regeneration",
-"To obtain firewood, basketry and fencing material",
-"To produce timber for bats",
-"None of the above"
-],
-answer:1
-},
-
-{
-q:"In shallow soils where terracing is not possible, the suitable land-use system is:",
-table:[],
-end:"",
-options:[
-"Taungya system",
-"Strip cropping",
-"Silvipasture",
-"Agriculture"
-],
-answer:2
-},
-
-{
-q:"Dendrology is the study of:",
-table:[],
-end:"",
-options:[
-"Wild animals",
-"Domestic animals",
-"Green vegetation",
-"Timber-producing trees and woody plants"
-],
-answer:3
-},
-
-{
-q:"Gymnosperms generally have:",
-table:[],
-end:"",
-options:[
-"Naked seeds",
-"Hard seed coat",
-"Small seeds",
-"None of the above"
-],
-answer:0
-},
-
-{
-q:"Pinaceae belongs to which order?",
-table:[],
-end:"",
-options:[
-"Cycadales",
-"Coniferales",
-"Malvales",
-"Monotales"
-],
-answer:1
-},
-
-{
-q:"The father of Dendrology is:",
-table:[],
-end:"",
-options:[
-"Aristotle",
-"Dietrich Brandis",
-"Birbal Sahni",
-"Gregor Mendel"
-],
-answer:1
-},
-
-{
-q:"The longest living tree among the following is:",
-table:[],
-end:"",
-options:[
-"Tectona grandis",
-"Acacia nilotica",
-"Pinus roxburghii",
-"Quercus artemesiifolia"
-],
-answer:3
-},
-
-{
-q:"Deodar is commonly found at an elevation of:",
-table:[],
-end:"",
-options:[
-"400–600 m",
-"Below 1000 m",
-"1800–2600 m",
-"Above 3000 m"
-],
-answer:2
-},
-
-{
-q:"The first classification system based on plant habit was proposed by:",
-table:[],
-end:"",
-options:[
-"Theophrastus",
-"Joseph Hooker",
-"Hutchinson",
-"George Bentham"
-],
-answer:0
-},
-
-{
-q:"Dicotyledonous plants possess:",
-table:[],
-end:"",
-options:[
-"Two cotyledons",
-"One cotyledon",
-"Four cotyledons",
-"Three cotyledons"
-],
-answer:0
-}
-
-
-];
-
-/* ===== SHUFFLE ===== */
-function shuffle(arr){
-    for(let i=arr.length-1;i>0;i--){
-        let j=Math.floor(Math.random()*(i+1));
-        [arr[i],arr[j]]=[arr[j],arr[i]];
-    }
-}
+/* ===================================
+   FORESTRY GYAN QUIZ ENGINE v2.0
+=================================== */
+
+// Shuffle Questions
 shuffle(quiz);
 
-let current=0, score=0, answered=false;
+/* ==========================
+   GLOBAL VARIABLES
+========================== */
 
-/* ===== LOAD ===== */
+let current = 0;
+let score = 0;
+
+let correct = 0;
+let wrong = 0;
+let skipped = 0;
+
+let answered = false;
+
+let seconds = 0;
+let timer = null;
+
+let currentOptions = [];
+
+let answeredQuestions = new Array(quiz.length).fill(false);
+
+let paletteStatus = new Array(quiz.length).fill("pending");
+
+/* ==========================
+   START QUIZ
+========================== */
+
+window.onload = function(){
+
+    createPalette();
+
+    startTimer();
+
+    loadQuestion();
+
+};
+
+/* ==========================
+   TIMER
+========================== */
+
+function startTimer(){
+
+    timer = setInterval(function(){
+
+        seconds++;
+
+        let min = Math.floor(seconds/60);
+
+        let sec = seconds%60;
+
+        document.getElementById("timer").textContent =
+        String(min).padStart(2,"0") + ":" +
+        String(sec).padStart(2,"0");
+
+    },1000);
+
+}
+
+/* ==========================
+   SHUFFLE
+========================== */
+
+function shuffle(arr){
+
+    for(let i=arr.length-1;i>0;i--){
+
+        let j=Math.floor(Math.random()*(i+1));
+
+        [arr[i],arr[j]]=[arr[j],arr[i]];
+
+    }
+
+}
+
+/* ==========================
+   CREATE QUESTION PALETTE
+========================== */
+
+function createPalette(){
+
+    let grid=document.getElementById("paletteGrid");
+
+    if(!grid) return;
+
+    grid.innerHTML="";
+
+    for(let i=0;i<quiz.length;i++){
+
+        let btn=document.createElement("div");
+
+        btn.className="palette-btn palette-pending";
+
+        btn.innerHTML=i+1;
+
+        btn.onclick=function(){
+
+            current=i;
+
+            loadQuestion();
+
+        };
+
+        grid.appendChild(btn);
+
+    }
+
+}
+
+/* ==========================
+   UPDATE PALETTE
+========================== */
+
+function updatePalette(){
+
+    let btns=document.querySelectorAll(".palette-btn");
+
+    btns.forEach((btn,index)=>{
+
+        btn.className="palette-btn";
+
+        btn.classList.add("palette-"+paletteStatus[index]);
+
+        if(index===current){
+
+            btn.classList.add("palette-current");
+
+        }
+
+    });
+
+}
+
+/* ==========================
+   UPDATE PROGRESS
+========================== */
+
+function updateProgress(){
+
+    let percent=((current+1)/quiz.length)*100;
+
+    document.getElementById("progress").style.width=
+    percent+"%";
+
+    let q=document.getElementById("questionNo");
+
+    if(q){
+
+        q.innerHTML=(current+1)+" / "+quiz.length;
+
+    }
+
+    document.getElementById("correctCount").innerHTML=correct;
+
+    document.getElementById("wrongCount").innerHTML=wrong;
+
+    document.getElementById("skipCount").innerHTML=skipped;
+
+    document.getElementById("score").innerHTML=
+    "Score : "+score;
+
+    updatePalette();
+
+}
+/* ==========================
+   LOAD QUESTION
+========================== */
+
 function loadQuestion(){
-    answered=false;
-    let q=quiz[current];
 
-    let html=`<p>${q.q}</p>`;
+    answered = answeredQuestions[current];
 
-    if(q.table.length){
-        html+=`<div class="q-table">`;
+    let q = quiz[current];
+
+    let html = `<p>${q.q}</p>`;
+
+    if(q.table && q.table.length){
+
+        html += `<div class="q-table">`;
+
         q.table.forEach(item=>{
-            html+=`<div class="q-row">${item}</div>`;
+
+            html += `<div class="q-row">${item}</div>`;
+
         });
-        html+=`</div>`;
+
+        html += `</div>`;
+
     }
 
     if(q.end){
-        html+=`<p class="q-end">${q.end}</p>`;
+
+        html += `<p class="q-end">${q.end}</p>`;
+
     }
 
-    document.getElementById("question").innerHTML=html;
+    document.getElementById("question").innerHTML = html;
 
-    document.getElementById("progress").style.width=
-    ((current/quiz.length)*100)+"%";
+    updateProgress();
 
-    let optionsDiv=document.getElementById("options");
-    optionsDiv.innerHTML="";
+    let optionsDiv = document.getElementById("options");
 
-    let opts=q.options.map((t,i)=>({text:t,index:i}));
-    shuffle(opts);
+    optionsDiv.innerHTML = "";
 
-    opts.forEach(opt=>{
+    currentOptions = q.options.map((text,index)=>({
+
+        text,
+
+        index
+
+    }));
+
+    shuffle(currentOptions);
+
+    currentOptions.forEach(opt=>{
+
         let btn=document.createElement("div");
+
+        btn.className="option";
+
+        btn.dataset.index=opt.index;
+
         btn.innerHTML=opt.text;
-        btn.classList.add("option");
-        btn.onclick=()=>checkAnswer(btn,opt.index);
-        optionsDiv.appendChild(btn);
-    });
-}
 
-/* ===== CHECK ===== */
-function checkAnswer(el,index){
-    if(answered) return;
-    answered=true;
+        if(answeredQuestions[current]){
 
-    let correct=quiz[current].answer;
-    let opts=document.querySelectorAll(".option");
+            btn.style.pointerEvents="none";
 
-    opts.forEach(o=>{
-        if(o.textContent===quiz[current].options[correct]){
-            o.classList.add("correct");
         }
+
+        btn.onclick=function(){
+
+            checkAnswer(btn,opt.index);
+
+        };
+
+        optionsDiv.appendChild(btn);
+
     });
 
-    if(index!==correct){
-        el.classList.add("wrong");
-    } else {
+}
+
+/* ==========================
+   CHECK ANSWER
+========================== */
+
+function checkAnswer(element,index){
+
+    if(answeredQuestions[current]) return;
+
+    answeredQuestions[current]=true;
+
+    let correctAnswer=quiz[current].answer;
+
+    let options=document.querySelectorAll(".option");
+
+    options.forEach(opt=>{
+
+        opt.style.pointerEvents="none";
+
+        if(Number(opt.dataset.index)===correctAnswer){
+
+            opt.classList.add("correct");
+
+        }
+
+    });
+
+    if(index===correctAnswer){
+
         score++;
+
+        correct++;
+
+        paletteStatus[current]="correct";
+
     }
 
-    document.getElementById("score").textContent=
-    `Score: ${score}/${current+1}`;
+    else{
+
+        wrong++;
+
+        paletteStatus[current]="wrong";
+
+        element.classList.add("wrong");
+
+    }
+
+    updateProgress();
+
 }
 
-/* ===== NEXT ===== */
+/* ==========================
+   NEXT
+========================== */
+
 function nextQuestion(){
-    if(!answered) return alert("Answer first!");
 
-    current++;
+    if(current<quiz.length-1){
 
-    if(current>=quiz.length){
-        endQuiz();
-        return;
+        current++;
+
+        loadQuestion();
+
     }
 
-    loadQuestion();
+    else{
+
+        endQuiz();
+
+    }
+
 }
 
-/* ===== SKIP ===== */
+/* ==========================
+   PREVIOUS
+========================== */
+
+function prevQuestion(){
+
+    if(current>0){
+
+        current--;
+
+        loadQuestion();
+
+    }
+
+}
+
+/* ==========================
+   SKIP
+========================== */
+
 function skipQuestion(){
-    current++;
 
-    if(current>=quiz.length){
-        endQuiz();
-        return;
+    if(!answeredQuestions[current]){
+
+        skipped++;
+
+        paletteStatus[current]="skipped";
+
     }
 
-    loadQuestion();
-}
+    if(current<quiz.length-1){
 
-/* ===== END ===== */
+        current++;
+
+        loadQuestion();
+
+    }
+
+    else{
+
+        endQuiz();
+
+    }
+
+}
+/* ===================================
+   PART 3B
+   RESULT SCREEN + RESTART
+===================================*/
+
 function endQuiz(){
-    document.querySelector(".quiz-container").innerHTML=
-    `<h2>🎉 Quiz Completed!</h2>
-     <p>Your Score: ${score}/${quiz.length}</p>
-     <button onclick="location.reload()">Restart</button>`;
+
+    clearInterval(timer);
+
+    let attempted = correct + wrong;
+
+    let accuracy = attempted === 0
+        ? 0
+        : ((correct / attempted) * 100).toFixed(1);
+
+    let minutes = Math.floor(seconds/60);
+    let sec = seconds % 60;
+
+    let remark = "";
+    let emoji = "🌱";
+
+    if(accuracy >= 90){
+        emoji = "🏆";
+        remark = "Outstanding!";
+    }
+    else if(accuracy >= 75){
+        emoji = "🥇";
+        remark = "Excellent!";
+    }
+    else if(accuracy >= 60){
+        emoji = "🥈";
+        remark = "Good Job!";
+    }
+    else if(accuracy >= 40){
+        emoji = "🥉";
+        remark = "Keep Practicing!";
+    }
+    else{
+        emoji = "📚";
+        remark = "Needs Improvement";
+    }
+
+    document.querySelector(".quiz-card").innerHTML = `
+
+<div class="result-screen">
+
+<div class="trophy">${emoji}</div>
+
+<h1>${remark}</h1>
+
+<p>Forestry Gyan Mock Test Completed</p>
+
+<div class="result-grid">
+
+<div class="result-card">
+<h2>${score}</h2>
+<span>Score</span>
+</div>
+
+<div class="result-card">
+<h2>${correct}</h2>
+<span>Correct</span>
+</div>
+
+<div class="result-card">
+<h2>${wrong}</h2>
+<span>Wrong</span>
+</div>
+
+<div class="result-card">
+<h2>${skipped}</h2>
+<span>Skipped</span>
+</div>
+
+<div class="result-card">
+<h2>${accuracy}%</h2>
+<span>Accuracy</span>
+</div>
+
+<div class="result-card">
+<h2>${minutes}:${String(sec).padStart(2,'0')}</h2>
+<span>Time Taken</span>
+</div>
+
+</div>
+
+<button class="restart-btn" onclick="restartQuiz()">
+🔄 Restart Quiz
+</button>
+
+</div>
+
+`;
+
 }
 
-loadQuestion();
+/*============================
+RESTART
+============================*/
+
+function restartQuiz(){
+
+    location.reload();
+
+}
+/* ===================================
+   PART 3C
+   REVIEW • KEYBOARD • SAVE
+===================================*/
+
+/* ==========================
+   AUTO SAVE
+========================== */
+
+function saveProgress(){
+
+    const data={
+
+        current,
+
+        score,
+
+        correct,
+
+        wrong,
+
+        skipped,
+
+        seconds,
+
+        answeredQuestions,
+
+        paletteStatus
+
+    };
+
+    localStorage.setItem("fg_quiz",JSON.stringify(data));
+
+}
+
+/* ==========================
+   LOAD SAVE
+========================== */
+
+function loadProgress(){
+
+    let data=localStorage.getItem("fg_quiz");
+
+    if(!data) return;
+
+    data=JSON.parse(data);
+
+    current=data.current||0;
+
+    score=data.score||0;
+
+    correct=data.correct||0;
+
+    wrong=data.wrong||0;
+
+    skipped=data.skipped||0;
+
+    seconds=data.seconds||0;
+
+    answeredQuestions=data.answeredQuestions||answeredQuestions;
+
+    paletteStatus=data.paletteStatus||paletteStatus;
+
+}
+
+/* ==========================
+   SAVE AFTER EVERY ACTION
+========================== */
+
+const oldUpdate=updateProgress;
+
+updateProgress=function(){
+
+    oldUpdate();
+
+    saveProgress();
+
+}
+
+/* ==========================
+   KEYBOARD SHORTCUTS
+========================== */
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key==="ArrowRight"){
+
+        nextQuestion();
+
+    }
+
+    if(e.key==="ArrowLeft"){
+
+        prevQuestion();
+
+    }
+
+    if(e.key==="s"||e.key==="S"){
+
+        skipQuestion();
+
+    }
+
+});
+
+/* ==========================
+   REVIEW MODE
+========================== */
+
+function reviewWrong(){
+
+    let wrongQuestions=[];
+
+    paletteStatus.forEach((x,index)=>{
+
+        if(x==="wrong"){
+
+            wrongQuestions.push(index+1);
+
+        }
+
+    });
+
+    if(wrongQuestions.length===0){
+
+        alert("🎉 No wrong questions!");
+
+        return;
+
+    }
+
+    alert(
+
+"Wrong Questions:\n\n"+
+
+wrongQuestions.join(", ")
+
+);
+
+}
+
+/* ==========================
+   RESULT BUTTON
+========================== */
+
+const oldEnd=endQuiz;
+
+endQuiz=function(){
+
+    localStorage.removeItem("fg_quiz");
+
+    oldEnd();
+
+    setTimeout(function(){
+
+        let btn=document.createElement("button");
+
+        btn.className="restart-btn";
+
+        btn.style.marginTop="20px";
+
+        btn.innerHTML="📋 Review Wrong Questions";
+
+        btn.onclick=reviewWrong;
+
+        document.querySelector(".result-screen")
+
+        .appendChild(btn);
+
+    },200);
+
+}
+
+/* ==========================
+   CONFETTI
+========================== */
+
+function celebrate(){
+
+    for(let i=0;i<100;i++){
+
+        let c=document.createElement("div");
+
+        c.style.position="fixed";
+
+        c.style.width="8px";
+
+        c.style.height="8px";
+
+        c.style.left=Math.random()*100+"vw";
+
+        c.style.top="-10px";
+
+        c.style.background=
+
+        ["#22c55e","#4ade80","#84cc16","#facc15","#ffffff"]
+
+        [Math.floor(Math.random()*5)];
+
+        c.style.borderRadius="50%";
+
+        c.style.zIndex=9999;
+
+        c.style.transition="4s linear";
+
+        document.body.appendChild(c);
+
+        setTimeout(()=>{
+
+            c.style.transform=
+
+            "translateY(120vh) rotate(720deg)";
+
+            c.style.opacity=0;
+
+        },50);
+
+        setTimeout(()=>{
+
+            c.remove();
+
+        },4000);
+
+    }
+
+}
+
+/* ==========================
+   IMPROVED RESULT
+========================== */
+
+const resultOld=endQuiz;
+
+endQuiz=function(){
+
+    resultOld();
+
+    celebrate();
+
+}
+
+/* ==========================
+   RESUME QUIZ
+========================== */
+
+loadProgress();
+
+updateProgress();
