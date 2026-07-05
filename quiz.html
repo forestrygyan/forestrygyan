@@ -1,202 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Quiz | Forestry Gyan</title>
+<title>Forestry Gyan Quiz</title>
 
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="quiz.css">
 
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-/* ===== PAGE ===== */
-.quiz-page {
-    background: linear-gradient(135deg, #020617, #0f172a);
-    min-height: 100vh;
-    color: #f8fafc;
-}
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-/* ===== NAVBAR FIX ===== */
-.navbar {
-    position: relative;
-    z-index: 1002;
-}
-
-/* ===== QUIZ CARD ===== */
-.quiz-container {
-    backdrop-filter: blur(18px);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 30px;
-    border-radius: 20px;
-    max-width: 700px;
-    margin: 80px auto;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-    text-align: center;
-}
-
-/* Question */
-#question {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-/* Options */
-.option {
-    display: block;
-    margin: 12px 0;
-    padding: 14px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    cursor: pointer;
-    transition: 0.25s;
-}
-
-.option:hover {
-    transform: scale(1.02);
-    background: rgba(16,185,129,0.15);
-}
-
-/* Correct/Wrong */
-.correct {
-    background: rgba(34,197,94,0.25) !important;
-    border: 1px solid #22c55e;
-}
-
-.wrong {
-    background: rgba(239,68,68,0.25) !important;
-    border: 1px solid #ef4444;
-}
-
-/* Button */
-button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    border-radius: 10px;
-    border: none;
-    background: linear-gradient(135deg, #10b981, #059669);
-    color: white;
-    cursor: pointer;
-}
-
-/* Score */
-.score {
-    margin-top: 15px;
-    color: #a7f3d0;
-}
-
-/* Progress */
-.progress-bar {
-    height: 6px;
-    width: 100%;
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.progress {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, #22c55e, #4ade80);
-}
-
-/* Back */
-.back-home {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.back-home a {
-    color: #34d399;
-    text-decoration: none;
-}
-
-</style>
 </head>
 
 <body class="quiz-page">
 
-<!-- ===== NAVBAR ===== -->
+<!-- Background -->
+<div class="bg1"></div>
+<div class="bg2"></div>
+
+<!-- ================= NAVBAR ================= -->
+
 <header class="navbar">
-    <div class="container nav-wrap">
 
-        <div class="brand">
-            <img src="logo rd.png">
-            <span>Forestry Gyan</span>
-        </div>
+<div class="container nav-wrap">
 
-        <!-- Hamburger -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+<div class="brand">
+<img src="logo rd.png" alt="">
+<span>Forestry Gyan</span>
+</div>
 
-        <!-- Links -->
-        <nav class="nav-links" id="navMenu">
-            <a href="index.html">Home</a>
-            <a href="aboutus.html">About Us</a>
-            <a href="News.html">News</a>
-            <a href="vanikicapsule.html">Vaniki Capsule</a>
-            <a href="contribute.html">Contribute</a>
-            <a href="privacypolicy.html">Privacy Policy</a>
-            <a href="resources.html">Resources</a>
-        </nav>
+<div class="hamburger" onclick="toggleMenu()">
 
-    </div>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<nav class="nav-links" id="navMenu">
+
+<a href="index.html">Home</a>
+<a href="resources.html">Resources</a>
+<a href="News.html">News</a>
+<a href="aboutus.html">About</a>
+
+</nav>
+
+</div>
+
 </header>
 
-<!-- ===== QUIZ ===== -->
-<div class="quiz-container">
+<!-- ================= QUIZ ================= -->
 
-    <h1>🌿 Forestry Quiz</h1>
+<section class="quiz-wrapper">
 
-    <div class="progress-bar">
-        <div class="progress" id="progress"></div>
-    </div>
+<div class="quiz-card">
 
-    <h2 id="question">Loading...</h2>
+<!-- Header -->
 
-    <div id="options"></div>
+<div class="quiz-header">
 
-   <div class="quiz-buttons">
-    <button class="skip-btn" onclick="skipQuestion()">⏭ Skip</button>
-<button onclick="nextQuestion()">Next</button>
-</div>
+<div>
 
-    <div class="score" id="score"></div>
+<h1>🌲 Forestry Quiz</h1>
+
+<p>Practice • Learn • Crack Forestry Exams</p>
 
 </div>
 
-<div class="back-home">
-    <a href="index.html">⬅ Back to Home</a>
+<div class="timer">
+
+<i class="fa-solid fa-clock"></i>
+
+<span id="timer">00:00</span>
+
 </div>
 
-<!-- ===== NAVBAR JS ===== -->
+</div>
+
+<!-- Stats -->
+
+<div class="stats">
+
+<div class="stat">
+
+<span class="label">Question</span>
+
+<h2 id="questionNo">1/1</h2>
+
+</div>
+
+<div class="stat">
+
+<span class="label">Correct</span>
+
+<h2 id="correctCount">0</h2>
+
+</div>
+
+<div class="stat">
+
+<span class="label">Wrong</span>
+
+<h2 id="wrongCount">0</h2>
+
+</div>
+
+<div class="stat">
+
+<span class="label">Skipped</span>
+
+<h2 id="skipCount">0</h2>
+
+</div>
+
+</div>
+
+<!-- Progress -->
+
+<div class="progress-box">
+
+<div class="progress">
+
+<div id="progress"></div>
+
+</div>
+
+</div>
+
+<!-- Question -->
+
+<div id="questionArea">
+
+<h2 id="question">
+
+Loading...
+
+</h2>
+
+</div>
+
+<!-- Options -->
+
+<div id="options">
+
+</div>
+
+<!-- Buttons -->
+
+<div class="buttons">
+
+<button class="prev-btn" onclick="prevQuestion()">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Previous
+
+</button>
+
+<button class="skip-btn" onclick="skipQuestion()">
+
+Skip
+
+</button>
+
+<button class="next-btn" onclick="nextQuestion()">
+
+Next
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+</div>
+
+<!-- Footer -->
+
+<div class="bottom">
+
+<div id="score">
+
+Score : 0
+
+</div>
+
+<button class="finish-btn"
+
+onclick="endQuiz()">
+
+Finish Quiz
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Question Palette -->
+
+<div class="palette">
+
+<h3>Question Palette</h3>
+
+<div id="paletteGrid">
+
+<!-- JS -->
+
+</div>
+
+<div class="legend">
+
+<div>
+
+<span class="green"></span>
+
+Answered
+
+</div>
+
+<div>
+
+<span class="red"></span>
+
+Wrong
+
+</div>
+
+<div>
+
+<span class="yellow"></span>
+
+Skipped
+
+</div>
+
+<div>
+
+<span class="gray"></span>
+
+Pending
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <script>
-function toggleMenu() {
-    document.getElementById("navMenu").classList.toggle("active");
-    document.querySelector(".hamburger").classList.toggle("active");
+
+function toggleMenu(){
+
+document.getElementById("navMenu").classList.toggle("active");
+
+document.querySelector(".hamburger").classList.toggle("active");
+
 }
 
-/* Click outside to close */
-document.addEventListener("click", function(e) {
-    const menu = document.getElementById("navMenu");
-    const burger = document.querySelector(".hamburger");
+document.addEventListener("click",function(e){
 
-    if (!menu.contains(e.target) && !burger.contains(e.target)) {
-        menu.classList.remove("active");
-        burger.classList.remove("active");
-    }
+const menu=document.getElementById("navMenu");
+
+const burger=document.querySelector(".hamburger");
+
+if(!menu.contains(e.target)&&!burger.contains(e.target)){
+
+menu.classList.remove("active");
+
+burger.classList.remove("active");
+
+}
+
 });
+
 </script>
 
-<!-- QUIZ LOGIC -->
+<!-- Quiz Questions -->
+<script src="questions.js"></script>
+
+<!-- Quiz Logic -->
 <script src="quiz.js"></script>
 
 </body>
+
 </html>
